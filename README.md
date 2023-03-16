@@ -11,7 +11,7 @@ This repo contains the offical implementations of the following papers on sign l
 - [CVPR 2022] A Simple Multi-Modality Transfer Learning Baseline for Sign Language Translation [[Paper]](https://arxiv.org/abs/2203.04287) [[Code]](TBD)
 
 ## Citation
-Please cite our works is you find this repo is helpful.
+Please cite our works if you find this repo is helpful.
 ```
 @article{chen2022two,
 title={Two-Stream Network for Sign Language Recognition and Translation},
