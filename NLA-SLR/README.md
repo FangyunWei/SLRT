@@ -20,7 +20,7 @@ There exists a lot of visually indistinguishable signs (VISigns) in current SLR 
 | MSASL-100 | 91.02 | 97.89 | 91.24 | 98.19 | [Google](https://drive.google.com/drive/folders/16EHXRukQ6KrsiupO9sdfdW81OQldjZd7?usp=share_link)/[Baidu]() | [config](configs/nla_slr_msasl_100.yaml) |
 | NMFs-CSL | 83.7 | 98.5 | -- | -- | [Google](https://drive.google.com/drive/folders/1P3bK6R92n7ijiD4lxffMaTOl1Lf6TlRI?usp=share_link)/[Baidu]() | [config](configs/nla_slr_nmf.yaml) |
 
-More checkpoints, e.g., single streams and VKNet-64/32 are available at [Google](https://drive.google.com/drive/folders/1kxZidDpjTEYC-I1X_apTBM8PQyLVHki-?usp=share_link)/[Baidu]().
+More checkpoints, e.g., single streams and VKNet-64/32, are available at [Google](https://drive.google.com/drive/folders/1kxZidDpjTEYC-I1X_apTBM8PQyLVHki-?usp=share_link)/[Baidu]().
 
 ## Usage
 ### Environment
