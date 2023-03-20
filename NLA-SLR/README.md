@@ -10,15 +10,17 @@ There exists a lot of visually indistinguishable signs (VISigns) in current SLR 
 
 | Dataset | P-I Top1 | P-I Top5 | P-C Top1 | P-C Top5 | Ckpt | Training |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| WLASL-2000 | 61.26 | 91.77 | 58.31 | 90.91 | [Google]()/[Baidu]() | [config](configs/nla_slr_wlasl_2000.yaml) |
-| WLASL-1000 | 75.64 | 94.62 | 75.72 | 94.65 | [Google]()/[Baidu]() | [config](configs/nla_slr_wlasl_1000.yaml) |
-| WLASL-300 | 86.98 | 97.60 | 87.33 | 97.81 | [Google]()/[Baidu]() | [config](configs/nla_slr_wlasl_300.yaml) |
-| WLASL-100 | 92.64 | 96.90 | 93.08 | 97.17 | [Google]()/[Baidu]() | [config](configs/nla_slr_wlasl_100.yaml) |
-| MSASL-1000 | 73.80 | 89.65 | 70.95 | 89.07 | [Google]()/[Baidu]() | [config](configs/nla_slr_msasl_1000.yaml) |
-| MSASL-500 | 82.90 | 93.46 | 83.06 | 93.54 | [Google]()/[Baidu]() | [config](configs/nla_slr_msasl_500.yaml) |
-| MSASL-200 | 89.48 | 96.69 | 89.86 | 96.93 | [Google]()/[Baidu]() | [config](configs/nla_slr_msasl_200.yaml) |
-| MSASL-100 | 91.02 | 97.89 | 91.24 | 98.19 | [Google]()/[Baidu]() | [config](configs/nla_slr_msasl_100.yaml) |
-| NMFs-CSL | 83.7 | 98.5 | -- | -- | [Google]()/[Baidu]() | [config](configs/nla_slr_nmf.yaml) |
+| WLASL-2000 | 61.26 | 91.77 | 58.31 | 90.91 | [Google](https://drive.google.com/drive/folders/1u2HOEXnZHFm6-F2NLFgRbLXlEe_iCbU8?usp=share_link)/[Baidu]() | [config](configs/nla_slr_wlasl_2000.yaml) |
+| WLASL-1000 | 75.64 | 94.62 | 75.72 | 94.65 | [Google](https://drive.google.com/drive/folders/1NjmtlBdLzxhoJQMzQHupim461R3M4UDt?usp=share_link)/[Baidu]() | [config](configs/nla_slr_wlasl_1000.yaml) |
+| WLASL-300 | 86.98 | 97.60 | 87.33 | 97.81 | [Google](https://drive.google.com/drive/folders/1SRGerA29ZB28MgtKV9MGprKyIfQWNtLn?usp=share_link)/[Baidu]() | [config](configs/nla_slr_wlasl_300.yaml) |
+| WLASL-100 | 92.64 | 96.90 | 93.08 | 97.17 | [Google](https://drive.google.com/drive/folders/1m5ED3ZntNuKStQldsHpG0FctVylGnDPx?usp=share_link)/[Baidu]() | [config](configs/nla_slr_wlasl_100.yaml) |
+| MSASL-1000 | 73.80 | 89.65 | 70.95 | 89.07 | [Google](https://drive.google.com/drive/folders/1yeNlVNkEtroHgHLFAUdCjM5z1Ms-Gwp1?usp=share_link)/[Baidu]() | [config](configs/nla_slr_msasl_1000.yaml) |
+| MSASL-500 | 82.90 | 93.46 | 83.06 | 93.54 | [Google](https://drive.google.com/drive/folders/15DNSzY0D1J-Tz-ZFTAHWGjdl4514cl9v?usp=share_link)/[Baidu]() | [config](configs/nla_slr_msasl_500.yaml) |
+| MSASL-200 | 89.48 | 96.69 | 89.86 | 96.93 | [Google](https://drive.google.com/drive/folders/1tmhkoHoUxxFKEHVSKUUeL4F6tpl9ZO6Y?usp=share_link)/[Baidu]() | [config](configs/nla_slr_msasl_200.yaml) |
+| MSASL-100 | 91.02 | 97.89 | 91.24 | 98.19 | [Google](https://drive.google.com/drive/folders/16EHXRukQ6KrsiupO9sdfdW81OQldjZd7?usp=share_link)/[Baidu]() | [config](configs/nla_slr_msasl_100.yaml) |
+| NMFs-CSL | 83.7 | 98.5 | -- | -- | [Google](https://drive.google.com/drive/folders/1P3bK6R92n7ijiD4lxffMaTOl1Lf6TlRI?usp=share_link)/[Baidu]() | [config](configs/nla_slr_nmf.yaml) |
+
+More checkpoints, e.g., single streams and VKNet-64/32 are available at [Google](https://drive.google.com/drive/folders/1kxZidDpjTEYC-I1X_apTBM8PQyLVHki-?usp=share_link)/[Baidu]()
 
 ## Usage
 ### Environment
