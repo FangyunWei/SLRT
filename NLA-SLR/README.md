@@ -56,7 +56,7 @@ python -m torch.distributed.launch --nproc_per_node 8 --master_port 29999 --use_
 Download S3D pretrained on K400 from [here](https://github.com/kylemin/S3D).
 Put it in `../../pretrained_models/s3ds_actioncls_ckpt`
 
-Split files, word embeddings, and keypoints are available at: WLASL ([Google](https://drive.google.com/drive/folders/1artt_YC1gLjvRNNXXK7s6rsXXtz7TC-p?usp=share_link)/[Baidu](https://pan.baidu.com/s/1G85Yum_SMjpWm3SlH_xBDw?pwd=9ry8)), MSASL ([Google](https://drive.google.com/drive/folders/1MUeibt9fXR4Vmmgqznanhxl_DbtX4BiX?usp=share_link)/[Baidu]()), NMFs-CSL ([Google](https://drive.google.com/drive/folders/1XgtSkj_vmnieshw7kdmej_ea9g-aIEaM?usp=share_link)/[Baidu](https://pan.baidu.com/s/10FGUodoygZkzW5G1QDKyAw?pwd=w4ro)).
+Split files, word embeddings, and keypoints are available at: WLASL ([Google](https://drive.google.com/drive/folders/1artt_YC1gLjvRNNXXK7s6rsXXtz7TC-p?usp=share_link)/[Baidu](https://pan.baidu.com/s/1G85Yum_SMjpWm3SlH_xBDw?pwd=9ry8)), MSASL ([Google](https://drive.google.com/drive/folders/1MUeibt9fXR4Vmmgqznanhxl_DbtX4BiX?usp=share_link)/[Baidu](https://pan.baidu.com/s/1xoUoqG3rUNHM_z3elLcVoQ?pwd=mvhw)), NMFs-CSL ([Google](https://drive.google.com/drive/folders/1XgtSkj_vmnieshw7kdmej_ea9g-aIEaM?usp=share_link)/[Baidu](https://pan.baidu.com/s/10FGUodoygZkzW5G1QDKyAw?pwd=w4ro)).
 
 
 ### Training

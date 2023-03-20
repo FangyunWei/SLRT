@@ -1,0 +1,111 @@
+task: ISLR
+data:
+  input_data: videos #features, gloss
+  input_streams:
+    - keypoint
+  keypoint_file: ../../data/wlasl_2000/keypoints_hrnet_dark_coco_wholebody.pkl
+  use_keypoints:
+    - pose
+    - mouth_half
+    - hand
+  zip_file: ../../data/wlasl_2000/WLASL2000.zip
+  train: ../../data/wlasl_2000/train.pkl
+  dev: ../../data/wlasl_2000/dev.pkl
+  test: ../../data/wlasl_2000/test.pkl
+  dataset_name: WLASL_2000
+  level: word #word or char
+  txt_lowercase: true
+  num_output_frames: 32
+  max_sent_length: 400
+  transform_cfg:
+    img_size: 224
+    color_jitter: true
+    bottom_area: 0.7 #to-do
+    center_crop_size: 224 #to-change for csl
+    center_crop: False
+    randomcrop_threshold: 1
+    aspect_ratio_min: 0.75
+    aspect_ratio_max: 1.3
+    temporal_augmentation:  #deprecated for ISLR
+      tmin: 0.5
+      tmax: 1.5
+testing:
+  cfg:
+    recognition:
+      beam_size: 1
+training:
+  # load_ckpt: results/rgb_frame32/ckpts/best.ckpt
+  overwrite: true
+  model_dir: results/pose_frame32
+  random_seed: 321
+  shuffle: True
+  num_workers: 8
+  batch_size: 4 #to-debug!
+  total_epoch: 100
+  keep_last_ckpts: 5
+  validation: 
+    unit: epoch
+    freq: 1
+    cfg:
+      recognition:
+        beam_size: 1
+  optimization:
+    optimizer: Adam
+    learning_rate:
+      default: 1.0e-3
+    weight_decay: 0.001
+    betas:
+    - 0.9
+    - 0.998
+    scheduler: cosineannealing
+    t_max: 100
+model:
+  RecognitionNetwork:
+    GlossTokenizer:
+      gloss2id_file: ../../pretrained_models/mBart_de_2/gloss2ids.pkl #deprecated
+    s3d:
+      pretrained_ckpt: ../../pretrained_models/s3ds_actioncls_ckpt #from K400
+      use_block: 5
+      freeze_block: 0
+    keypoint_s3d:
+      in_channel: 0 # placeholder
+      pretrained_ckpt: ../../pretrained_models/s3ds_actioncls_ckpt #from K400
+      use_block: 5
+      freeze_block: 0
+    heatmap_cfg:
+      raw_size:
+        - 256
+        - 256 #associated with name2keypoint file 
+      input_size: 112
+      sigma: 8
+    fuse_method: null
+    lateral:
+      pose2rgb: false
+      rgb2pose: false
+      variant_pose2rgb: null
+      variant_rgb2pose: null
+      fusion_features:
+        - c1
+        - c2
+        - c3
+    pyramid:
+      version: v1
+      rgb: null
+      pose: null
+      head_weight_rgb: 0.2
+      head_weight_keypoint: 0.5
+      num_levels: 3
+    visual_head:
+      variant: sep_conv
+      input_size: 1024
+      hidden_size: 512  #deprecated
+      ff_size: 2048  #deprecated
+      pe: True  #deprecated
+      ff_kernelsize:  #deprecated
+        - 3
+        - 3
+      word_emb_dim: 300
+      temp: 0.1
+      contras_setting: null
+      margin: 1.0
+      mean_first: true

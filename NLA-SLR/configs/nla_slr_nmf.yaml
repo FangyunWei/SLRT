@@ -1,0 +1,136 @@
+task: ISLR
+data:
+  input_data: videos #features, gloss
+  input_streams:
+    - keypoint
+    - keypoint
+    - rgb
+    - rgb
+  keypoint_file: ../../data/NMFs-CSL/keypoints_hrnet_dark_coco_wholebody.pkl
+  use_keypoints:
+    - pose
+    - mouth_half
+    - hand
+  zip_file: ../../data/NMFs-CSL/NMFs-CSL_video.zip
+  train: ../../data/NMFs-CSL/train.pkl
+  dev: ../../data/NMFs-CSL/dev.pkl
+  test: ../../data/NMFs-CSL/test.pkl
+  dataset_name: NMFs-CSL
+  level: word #word or char
+  txt_lowercase: true
+  num_output_frames: 64
+  max_sent_length: 400
+  transform_cfg:
+    img_size: 224
+    color_jitter: true
+    bottom_area: 0.7 #to-do
+    center_crop_size: 224 #to-change for csl
+    center_crop: false
+    randomcrop_threshold: 1
+    aspect_ratio_min: 0.75
+    aspect_ratio_max: 1.3
+    temporal_augmentation:  #deprecated for ISLR
+      tmin: 0.5
+      tmax: 1.5
+    index_setting:
+      - consecutive  #train_p
+      - pad  #train_m
+      - central  #test_p
+      - pad  #test_m
+    mixup: 0.75_0.8
+    from64: true
+testing:
+  cfg:
+    recognition:
+      beam_size: 1
+training:
+  overwrite: true
+  model_dir: results/nla_slr_nmf
+  random_seed: 321
+  shuffle: True
+  num_workers: 8
+  batch_size: 4  #to-debug!
+  total_epoch: 100
+  keep_last_ckpts: 1
+  validation: 
+    unit: epoch
+    freq: 1
+    cfg:
+      recognition:
+        beam_size: 1
+  optimization:
+    optimizer: Adam
+    learning_rate:
+      default: 1.0e-3
+    weight_decay: 0.001
+    betas:
+    - 0.9
+    - 0.998
+    scheduler: cosineannealing
+    t_max: 100
+model:
+  RecognitionNetwork:
+    # pretrained_path_two:
+    #   - results/two_frame64_nmf/ckpts/best.ckpt
+    #   - results/two_frame32_nmf/ckpts/best.ckpt
+    GlossTokenizer:
+      gloss2id_file: ../../pretrained_models/mBart_de_2/gloss2ids.pkl  #deprecated
+    s3d:
+      pretrained_ckpt: ../../pretrained_models/s3ds_actioncls_ckpt #from K400
+      use_block: 5
+      freeze_block: 0
+    keypoint_s3d:
+      in_channel: 0 # placeholder
+      pretrained_ckpt: ../../pretrained_models/s3ds_actioncls_ckpt #from K400
+      use_block: 5
+      freeze_block: 0
+    heatmap_cfg:
+      raw_size:
+        - 512
+        - 512 #associated with name2keypoint file
+      map_size:
+        - 256
+        - 256
+      input_size: 112
+      sigma: 8
+    fuse_method: four_type3
+    lateral:
+      pose2rgb: true
+      rgb2pose: true
+      variant_pose2rgb: null
+      variant_rgb2pose: null
+      interpolate: false
+      kernel_size: 
+        - 1
+        - 3
+        - 3
+      fusion_features:
+        - c1
+        - c2
+        - c3
+        - c4
+    pyramid:
+      version: v1
+      rgb: null
+      pose: null
+    aux_head:
+      head_weight_rgb: 0.2
+      head_weight_keypoint: 0.5
+      num: 0
+    visual_head:
+      variant: sep_conv
+      use_extra_linear: false  #for joint head only
+      input_size: 1024
+      hidden_size: 512  #deprecated
+      ff_size: 2048  #deprecated
+      pe: True  #deprecated
+      ff_kernelsize:  #deprecated
+        - 3
+        - 3
+      word_emb_dim: 300
+      temp: 0.1
+      contras_setting: null
+      topk: 2000
+    label_smooth: 0.2
+    # contras_loss_weight: 1.0
+    # language_apply_to: rgb_keypoint_joint  #apply to which head?
