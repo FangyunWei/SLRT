@@ -1,0 +1,134 @@
+task: S2T
+data:
+  dataset_name: csl-daily
+  zip_file: data/csl-daily/csl-daily-videos.zip
+  keypoint_file: data/csl-daily/csl-daily-keypoints.pkl
+  train: data/csl-daily/csl-daily.train 
+  dev: data/csl-daily/csl-daily.dev
+  test: data/csl-daily/csl-daily.test
+  dev_head_keypoint_input: experiments/outputs/TwoStream/csl-daily_s2g/extract_feature/head_keypoint_input/dev.pkl
+  dev_head_rgb_input: experiments/outputs/TwoStream/csl-daily_s2g/extract_feature/head_rgb_input/dev.pkl
+  test_head_keypoint_input: experiments/outputs/TwoStream/csl-daily_s2g/extract_feature/head_keypoint_input/test.pkl
+  test_head_rgb_input: experiments/outputs/TwoStream/csl-daily_s2g/extract_feature/head_rgb_input/test.pkl
+  train_head_keypoint_input: experiments/outputs/TwoStream/csl-daily_s2g/extract_feature/head_keypoint_input/train.pkl
+  train_head_rgb_input: experiments/outputs/TwoStream/csl-daily_s2g/extract_feature/head_rgb_input/train.pkl
+  input_data: videos
+  input_streams:
+  - keypoint
+  - rgb
+  level: char
+  max_sent_length: 400
+  txt_lowercase: true
+  use_keypoints:
+  - pose
+  - mouth_half
+  - hand
+  - face_others_1_3
+testing:
+  cfg:
+    recognition:
+      beam_size: 1
+    translation:
+      length_penalty: 1
+      max_length: 500
+      num_beams: 5
+training:
+  batch_size: 8
+  keep_last_ckpts: 5
+  load_ckpt: experiments/outputs/TwoStream/csl-daily_s2g/ckpts/best.ckpt
+  model_dir: experiments/outputs/TwoStream/csl-daily_s2t_video
+  num_workers: 4
+  optimization:
+    betas:
+    - 0.9
+    - 0.998
+    learning_rate:
+      default: 0.0001
+      translation: 1.0e-05
+    optimizer: Adam
+    scheduler: cosineannealing
+    t_max: 40
+    weight_decay: 0.001
+  overwrite: true
+  random_seed: 0
+  shuffle: true
+  total_epoch: 40
+  validation:
+    cfg:
+      recognition:
+        beam_size: 1
+      translation:
+        length_penalty: 1
+        max_length: 60
+        num_beams: 4
+    freq: 1
+    unit: epoch
+model:
+  RecognitionNetwork:
+    GlossTokenizer:
+      gloss2id_file: data/csl-daily/gloss2ids.pkl
+    fuse_method: triplehead_cat_bilateral
+    gloss_feature_ensemble: rgb_gloss_probabilities
+    heatmap_cfg:
+      input_size: 112
+      map_size:
+      - 170
+      - 170
+      raw_size:
+      - 512
+      - 512
+      sigma: 8
+      threshold: 0.5
+    keypoint_s3d:
+      freeze_block: 0
+      in_channel: 79
+      pretrained_ckpt: pretrained_models/s3ds_actioncls_ckpt
+      use_block: 4
+    lateral:
+      fusion_features:
+      - c1
+      - c2
+      - c3
+      pose2rgb: true
+      rgb2pose: true
+      variant_pose2rgb: null
+      variant_rgb2pose: null
+    pyramid:
+      head_weight_keypoint: 0.5
+      head_weight_rgb: 0.2
+      num_levels: 3
+      pose: multi_head
+      rgb: multi_head
+      version: v1
+    s3d:
+      freeze_block: 1
+      pretrained_ckpt: pretrained_models/s3ds_actioncls_ckpt
+      use_block: 4
+    visual_head:
+      ff_kernelsize:
+      - 3
+      - 3
+      ff_size: 2048
+      hidden_size: 512
+      input_size: 832
+      pe: true
+  TranslationNetwork:
+    GlossEmbedding:
+      gloss2embed_file: pretrained_models/mBart_zh/gloss_embeddings.bin 
+    GlossTokenizer:
+      gloss2id_file: pretrained_models/mBart_zh/gloss2ids.pkl 
+      src_lang: zh_CSL
+    TextTokenizer:
+      pretrained_model_name_or_path: pretrained_models/mBart_zh/ 
+      pruneids_file: pretrained_models/mBart_zh/old2new_vocab.pkl 
+      tgt_lang: zh_CN
+    freeze_txt_embed: false
+    label_smoothing: 0.2
+    overwrite_cfg:
+      attention_dropout: 0.1
+      dropout: 0.3
+    pretrained_model_name_or_path: pretrained_models/mBart_zh/
+    load_ckpt: experiments/outputs/SingleStream/csl-daily_g2t/ckpts/step_1000.ckpt
+  VLMapper:
+    freeze: false
+    type: embedding

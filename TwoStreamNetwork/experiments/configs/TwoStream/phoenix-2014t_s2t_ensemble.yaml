@@ -1,0 +1,49 @@
+task: S2T_Ensemble
+data:
+  dataset_name: phoenix-2014t
+  dev: data/phoenix-2014t/phoenix-2014t.dev
+  test: data/phoenix-2014t/phoenix-2014t.test
+  dev_inputs_embeds:
+  - experiments/outputs/TwoStream/phoenix-2014t_s2t_joint/extract_feature/inputs_embeds/dev.pkl
+  - experiments/outputs/TwoStream/phoenix-2014t_s2t_video/extract_feature/inputs_embeds/dev.pkl
+  - experiments/outputs/TwoStream/phoenix-2014t_s2t_keypoint/extract_feature/inputs_embeds/dev.pkl
+  test_inputs_embeds:
+  - experiments/outputs/TwoStream/phoenix-2014t_s2t_joint/extract_feature/inputs_embeds/test.pkl
+  - experiments/outputs/TwoStream/phoenix-2014t_s2t_video/extract_feature/inputs_embeds/test.pkl
+  - experiments/outputs/TwoStream/phoenix-2014t_s2t_keypoint/extract_feature/inputs_embeds/test.pkl
+  level: word
+  max_sent_length: 400
+  txt_lowercase: true
+testing:
+  cfg:
+    recognition:
+      beam_size: 1
+    translation:
+      length_penalty: 1
+      max_length: 100
+      num_beams: 5
+training:
+  batch_size: 8
+  model_dir: experiments/outputs/TwoStream/phoenix-2014t_s2t_ensemble
+model:
+  TranslationNetwork_Ensemble:
+    GlossEmbedding:
+      freeze: false
+      gloss2embed_file: pretrained_models/mBart_de/gloss_embeddings.bin
+    GlossTokenizer:
+      gloss2id_file: pretrained_models/mBart_de/gloss2ids.pkl
+      src_lang: de_DGS
+    TextTokenizer:
+      pretrained_model_name_or_path: pretrained_models/mBart_de
+      pruneids_file: pretrained_models/mBart_de/map_ids.pkl
+      tgt_lang: de_DE
+    freeze_txt_embed: false
+    label_smoothing: 0.2
+    load_ckpts:
+    - experiments/outputs/TwoStream/phoenix-2014t_s2t_joint/ckpts/best.ckpt
+    - experiments/outputs/TwoStream/phoenix-2014t_s2t_video/ckpts/best.ckpt
+    - experiments/outputs/TwoStream/phoenix-2014t_s2t_keypoint/ckpts/best.ckpt
+    overwrite_cfg:
+      attention_dropout: 0.1
+      dropout: 0.3
+    pretrained_model_name_or_path: pretrained_models/mBart_de

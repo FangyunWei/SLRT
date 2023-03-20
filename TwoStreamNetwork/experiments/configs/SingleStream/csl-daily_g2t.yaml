@@ -1,0 +1,66 @@
+task: G2T
+data:
+  dataset_name: csl-daily
+  zip_file: data/csl-daily/csl-daily-videos.zip
+  train: data/csl-daily/csl-daily.train 
+  dev: data/csl-daily/csl-daily.dev
+  test: data/csl-daily/csl-daily.test
+  input_data: gloss
+  level: char
+  max_sent_length: 400
+  txt_lowercase: true
+testing:
+  cfg:
+    translation:
+      length_penalty: 1
+      max_length: 500
+      num_beams: 5
+training:
+  batch_size: 8
+  keep_last_ckpts: 20
+  model_dir: experiments/outputs/SingleStream/csl-daily_g2t
+  num_workers: 4
+  optimization:
+    betas:
+    - 0.9
+    - 0.998
+    learning_rate:
+      default: 0.0001
+      translation: 1.0e-05
+    optimizer: Adam
+    scheduler: cosineannealing
+    t_max: 80
+    weight_decay: 0.001
+  overwrite: true
+  random_seed: 0
+  shuffle: true
+  total_epoch: 4
+  validation:
+    cfg:
+      translation:
+        length_penalty: 1
+        max_length: 100
+        num_beams: 4
+    freq: 1000
+    unit: step
+model:
+  TranslationNetwork:
+    GlossEmbedding:
+      freeze: true
+      gloss2embed_file: pretrained_models/mBart_zh/gloss_embeddings.bin 
+    GlossTokenizer:
+      gloss2id_file: pretrained_models/mBart_zh/gloss2ids.pkl 
+      src_lang: zh_CSL
+    TextTokenizer:
+      pretrained_model_name_or_path: pretrained_models/mBart_zh/ 
+      pruneids_file: pretrained_models/mBart_zh/old2new_vocab.pkl 
+      tgt_lang: zh_CN
+    freeze_txt_embed: true
+    label_smoothing: 0.2
+    overwrite_cfg:
+      attention_dropout: 0.1
+      dropout: 0.3
+    pretrained_model_name_or_path: pretrained_models/mBart_zh/
+  VLMapper:
+    freeze: false
+    type: embedding

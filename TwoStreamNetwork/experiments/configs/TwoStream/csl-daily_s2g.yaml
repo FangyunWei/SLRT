@@ -1,0 +1,126 @@
+task: S2G
+data:
+  input_data: videos #features, gloss
+  zip_file: data/csl-daily/csl-daily-videos.zip
+  input_streams:
+    - keypoint
+    - rgb
+  keypoint_file: data/csl-daily/csl-daily-keypoints.pkl
+  use_keypoints:
+    - pose 
+    - mouth_half
+    - hand
+    - face_others_1_3
+  dataset_name: csl-daily
+  level: char #word or char
+  txt_lowercase: true
+  max_sent_length: 400
+  train: data/csl-daily/csl-daily.train 
+  dev: data/csl-daily/csl-daily.dev
+  test: data/csl-daily/csl-daily.test
+  transform_cfg:
+    img_size: 224
+    aug_hflip: false
+    color_jitter: true
+    bottom_area: 0.7 
+    csl_cut: False
+    csl_resize: 
+      - 320
+      - 320 
+    center_crop: true
+    center_crop_size: 270
+    randomcrop_threshold: 1
+    aspect_ratio_min: 0.75
+    aspect_ratio_max: 1.3
+    temporal_augmentation:
+      tmin: 0.5
+      tmax: 1.5
+testing:
+  cfg:
+    recognition:
+      beam_size: 5
+training:
+  overwrite: True
+  model_dir: experiments/outputs/TwoStream/csl-daily_s2g
+  random_seed: 0
+  shuffle: True
+  num_workers: 4
+  batch_size: 1 
+  total_epoch: 40
+  keep_last_ckpts: 5
+  validation: 
+    unit: epoch
+    freq: 1
+    cfg:
+      recognition:
+        beam_size: 1
+  optimization:
+    optimizer: Adam
+    learning_rate:
+      default: 1.0e-3
+    weight_decay: 0.001
+    betas:
+    - 0.9
+    - 0.998
+    scheduler: cosineannealing
+    t_max: 40
+model:
+  RecognitionNetwork:
+    pretrained_path_rgb: experiments/outputs/TwoStream/csl-daily_video/ckpts/best.ckpt
+    pretrained_path_keypoint: experiments/outputs/TwoStream/csl-daily_keypoint/ckpts/best.ckpt
+    GlossTokenizer:
+      gloss2id_file: data/csl-daily/gloss2ids.pkl
+    s3d:
+      pretrained_ckpt: pretrained_models/s3ds_actioncls_ckpt
+      use_block: 4
+      freeze_block: 1
+    keypoint_s3d:
+      in_channel: 0 # placeholder
+      pretrained_ckpt: pretrained_models/s3ds_actioncls_ckpt #from K400
+      use_block: 4
+      freeze_block: 0
+    heatmap_cfg:
+      raw_size:
+        - 512
+        - 512 #associated with name2keypoint file   
+      map_size:
+        - 170
+        - 170 
+      input_size: 112
+      sigma: 8
+      threshold: 0.5
+    fuse_method: triplehead_cat_bilateral
+    lateral:
+      pose2rgb: true
+      rgb2pose: true
+      variant_pose2rgb: null
+      variant_rgb2pose: null
+      fusion_features:
+        - c1
+        - c2
+        - c3
+    pyramid:
+      version: v1
+      rgb: multi_head
+      pose: multi_head
+      head_weight_rgb: 0.2
+      head_weight_keypoint: 0.5
+      num_levels: 3
+    visual_head:
+      input_size: 832
+      hidden_size: 512
+      ff_size: 2048 
+      pe: True 
+      ff_kernelsize:
+        - 3
+        - 3
+    cross_distillation:
+      teacher_detach: True
+      types:
+        ensemble_last_teaches_keypoint: 1
+        ensemble_last_teaches_rgb: 1
+        ensemble_last_teaches_fuse: 1
+
+
+
+
