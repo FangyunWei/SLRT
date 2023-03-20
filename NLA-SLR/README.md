@@ -4,23 +4,24 @@ Official Implementations for [Natual Language-Assisted Sign Language Recognition
 ## Introduction
 <img src="images/similar.png" width="400"><img src="images/distinct.png" width="400">
 <img src="images/idea.png" width="800">
+
 There exists a lot of visually indistinguishable signs (VISigns) in current SLR datasets. They can be categorized into two classes: VISigns with similar or distinct semantic meanings. However, purely vision-based neural networks are less effective to recognize these VISigns. To address this issue, we propose the Natural Language-Assisted Sign Language Recognition (NLA-SLR) framework, which exploits semantic information contained in glosses (sign labels). First, for VISigns with similar semantic meanings, we propose language-aware label smoothing by generating soft labels for each training sign whose smoothing weights are computed from the normalized semantic similarities among the glosses to ease training. Second, for VISigns with distinct semantic meanings, we present an inter-modality mixup technique which blends vision and gloss features to further maximize the separability of different signs under the supervision of blended labels.
 
 ## Performance and Checkpoints
 
 | Dataset | P-I Top1 | P-I Top5 | P-C Top1 | P-C Top5 | Ckpt | Training |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| WLASL-2000 | 61.26 | 91.77 | 58.31 | 90.91 | [Google](https://drive.google.com/drive/folders/1u2HOEXnZHFm6-F2NLFgRbLXlEe_iCbU8?usp=share_link)/[Baidu]() | [config](configs/nla_slr_wlasl_2000.yaml) |
-| WLASL-1000 | 75.64 | 94.62 | 75.72 | 94.65 | [Google](https://drive.google.com/drive/folders/1NjmtlBdLzxhoJQMzQHupim461R3M4UDt?usp=share_link)/[Baidu]() | [config](configs/nla_slr_wlasl_1000.yaml) |
-| WLASL-300 | 86.98 | 97.60 | 87.33 | 97.81 | [Google](https://drive.google.com/drive/folders/1SRGerA29ZB28MgtKV9MGprKyIfQWNtLn?usp=share_link)/[Baidu]() | [config](configs/nla_slr_wlasl_300.yaml) |
-| WLASL-100 | 92.64 | 96.90 | 93.08 | 97.17 | [Google](https://drive.google.com/drive/folders/1m5ED3ZntNuKStQldsHpG0FctVylGnDPx?usp=share_link)/[Baidu]() | [config](configs/nla_slr_wlasl_100.yaml) |
-| MSASL-1000 | 73.80 | 89.65 | 70.95 | 89.07 | [Google](https://drive.google.com/drive/folders/1yeNlVNkEtroHgHLFAUdCjM5z1Ms-Gwp1?usp=share_link)/[Baidu]() | [config](configs/nla_slr_msasl_1000.yaml) |
-| MSASL-500 | 82.90 | 93.46 | 83.06 | 93.54 | [Google](https://drive.google.com/drive/folders/15DNSzY0D1J-Tz-ZFTAHWGjdl4514cl9v?usp=share_link)/[Baidu]() | [config](configs/nla_slr_msasl_500.yaml) |
-| MSASL-200 | 89.48 | 96.69 | 89.86 | 96.93 | [Google](https://drive.google.com/drive/folders/1tmhkoHoUxxFKEHVSKUUeL4F6tpl9ZO6Y?usp=share_link)/[Baidu]() | [config](configs/nla_slr_msasl_200.yaml) |
-| MSASL-100 | 91.02 | 97.89 | 91.24 | 98.19 | [Google](https://drive.google.com/drive/folders/16EHXRukQ6KrsiupO9sdfdW81OQldjZd7?usp=share_link)/[Baidu]() | [config](configs/nla_slr_msasl_100.yaml) |
-| NMFs-CSL | 83.7 | 98.5 | -- | -- | [Google](https://drive.google.com/drive/folders/1P3bK6R92n7ijiD4lxffMaTOl1Lf6TlRI?usp=share_link)/[Baidu]() | [config](configs/nla_slr_nmf.yaml) |
+| WLASL-2000 | 61.26 | 91.77 | 58.31 | 90.91 | [Google](https://drive.google.com/drive/folders/1u2HOEXnZHFm6-F2NLFgRbLXlEe_iCbU8?usp=share_link)/[Baidu](https://pan.baidu.com/s/16Dl82PJFThv6McITf8MeWQ?pwd=brcz) | [config](configs/nla_slr_wlasl_2000.yaml) |
+| WLASL-1000 | 75.64 | 94.62 | 75.72 | 94.65 | [Google](https://drive.google.com/drive/folders/1NjmtlBdLzxhoJQMzQHupim461R3M4UDt?usp=share_link)/[Baidu](https://pan.baidu.com/s/1IY5aPrab0ZtHFfu4YFKl7Q?pwd=fi1s) | [config](configs/nla_slr_wlasl_1000.yaml) |
+| WLASL-300 | 86.98 | 97.60 | 87.33 | 97.81 | [Google](https://drive.google.com/drive/folders/1SRGerA29ZB28MgtKV9MGprKyIfQWNtLn?usp=share_link)/[Baidu](https://pan.baidu.com/s/1YRtsLyxb11vpvZSHeln57Q?pwd=xb5c) | [config](configs/nla_slr_wlasl_300.yaml) |
+| WLASL-100 | 92.64 | 96.90 | 93.08 | 97.17 | [Google](https://drive.google.com/drive/folders/1m5ED3ZntNuKStQldsHpG0FctVylGnDPx?usp=share_link)/[Baidu](https://pan.baidu.com/s/1h9omKOSJYvcwG_0AWudnLQ?pwd=u8p3) | [config](configs/nla_slr_wlasl_100.yaml) |
+| MSASL-1000 | 73.80 | 89.65 | 70.95 | 89.07 | [Google](https://drive.google.com/drive/folders/1yeNlVNkEtroHgHLFAUdCjM5z1Ms-Gwp1?usp=share_link)/[Baidu](https://pan.baidu.com/s/1YbOmqablXwydvv_IRQ3Fbg?pwd=r4ni) | [config](configs/nla_slr_msasl_1000.yaml) |
+| MSASL-500 | 82.90 | 93.46 | 83.06 | 93.54 | [Google](https://drive.google.com/drive/folders/15DNSzY0D1J-Tz-ZFTAHWGjdl4514cl9v?usp=share_link)/[Baidu](https://pan.baidu.com/s/19wh7B5AhhYRc8QP7fZy3oQ?pwd=mw9m) | [config](configs/nla_slr_msasl_500.yaml) |
+| MSASL-200 | 89.48 | 96.69 | 89.86 | 96.93 | [Google](https://drive.google.com/drive/folders/1tmhkoHoUxxFKEHVSKUUeL4F6tpl9ZO6Y?usp=share_link)/[Baidu](https://pan.baidu.com/s/1s0HrP3RuBcQn2ckgsGN7EA?pwd=x3r7) | [config](configs/nla_slr_msasl_200.yaml) |
+| MSASL-100 | 91.02 | 97.89 | 91.24 | 98.19 | [Google](https://drive.google.com/drive/folders/16EHXRukQ6KrsiupO9sdfdW81OQldjZd7?usp=share_link)/[Baidu](https://pan.baidu.com/s/1eUqY5vDBKQr14gYqlm-wtQ?pwd=6us1) | [config](configs/nla_slr_msasl_100.yaml) |
+| NMFs-CSL | 83.7 | 98.5 | -- | -- | [Google](https://drive.google.com/drive/folders/1P3bK6R92n7ijiD4lxffMaTOl1Lf6TlRI?usp=share_link)/[Baidu](https://pan.baidu.com/s/1qhQLPlQGW9zZkOf-OkB7LQ?pwd=mv1g) | [config](configs/nla_slr_nmf.yaml) |
 
-More checkpoints, e.g., single streams and VKNet-64/32, are available at [Google](https://drive.google.com/drive/folders/1kxZidDpjTEYC-I1X_apTBM8PQyLVHki-?usp=share_link)/[Baidu]().
+More checkpoints, e.g., single streams and VKNet-64/32, are available at [Google](https://drive.google.com/drive/folders/1kxZidDpjTEYC-I1X_apTBM8PQyLVHki-?usp=share_link)/[Baidu](https://pan.baidu.com/s/1dkbs0JqWukXMoY6gwV-XLw?pwd=up4z).
 
 ## Usage
 ### Environment
@@ -55,7 +56,7 @@ python -m torch.distributed.launch --nproc_per_node 8 --master_port 29999 --use_
 Download S3D pretrained on K400 from [here](https://github.com/kylemin/S3D).
 Put it in `../../pretrained_models/s3ds_actioncls_ckpt`
 
-Split files, word embeddings, and keypoints are available at: WLASL ([Google]()/[Baidu]()), MSASL ([Google]()/[Baidu]()), NMFs-CSL ([Google]()/[Baidu]()).
+Split files, word embeddings, and keypoints are available at: WLASL ([Google](https://drive.google.com/drive/folders/1artt_YC1gLjvRNNXXK7s6rsXXtz7TC-p?usp=share_link)/[Baidu](https://pan.baidu.com/s/1G85Yum_SMjpWm3SlH_xBDw?pwd=9ry8)), MSASL ([Google](https://drive.google.com/drive/folders/1MUeibt9fXR4Vmmgqznanhxl_DbtX4BiX?usp=share_link)/[Baidu]()), NMFs-CSL ([Google](https://drive.google.com/drive/folders/1XgtSkj_vmnieshw7kdmej_ea9g-aIEaM?usp=share_link)/[Baidu](https://pan.baidu.com/s/10FGUodoygZkzW5G1QDKyAw?pwd=w4ro)).
 
 
 ### Training
