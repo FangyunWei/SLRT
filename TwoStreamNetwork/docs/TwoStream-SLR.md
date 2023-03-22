@@ -2,9 +2,9 @@
 
 | Dataset | WER | Model | Training |
 | :---: | :---: | :---: | :---: | 
-| Phoenix-2014 | 18.8 | [ckpt]() | [config](../experiments/configs/TwoStream/phoenix-2014_s2g.yaml) |
-| Phoenix-2014T | 19.3 | [ckpt]() | [config](../experiments/configs/TwoStream/phoenix-2014t_s2g.yaml) |
-| CSL-Daily | 25.3 | [ckpt]() | [config](../experiments/configs/TwoStream/csl-daily_s2g.yaml) |
+| Phoenix-2014 | 18.8 | [ckpt](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/Ek82sSjQiItKtztuEtpwWSMBnbIq4AJf_lEWNa3sOAT6Fg?e=JXMUgQ) | [config](experiments/configs/TwoStream/phoenix-2014_s2g.yaml) |
+| Phoenix-2014T | 19.3 | [ckpt](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/EtMUEBGyQ-1PkVh85I_I-MoBwpJaifdKrt0b9cHrXUHzSw?e=v1y7hQ) | [config](experiments/configs/TwoStream/phoenix-2014t_s2g.yaml) |
+| CSL-Daily | 25.3 | [ckpt](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/Ev9XdwEfIg9CqINHeNC2K0kB2-buEGf_Ef1yZoF2pKlT5w?e=dBx5gG) | [config](experiments/configs/TwoStream/csl-daily_s2g.yaml) |
 
 Here we describe the training of the two-stream network for sign language recognition task. 
 
