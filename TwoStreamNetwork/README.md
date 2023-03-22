@@ -17,21 +17,21 @@ We further propose a [twostream network for SLR and SLT](https://arxiv.org/abs/2
 **SingleStream-SLT (The simple multi-modality transfer learning baseline for SLT)**
 | Dataset | R | B1 | B2 | B3 | B4 | Model | Training |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| Phoenix-2014T | 53.08 | 54.48 | 41.93 | 33.97 | 28.57 | [ckpt]() | [config](experiments/configs/SingleStream/phoenix-2014t_s2t.yaml) |
-| CSL-Daily | 53.35 | 53.53 | 40.68 | 31.04 | 24.09 |[ckpt]() | [config](experiments/configs/SingleStream/csl-daily_s2t.yaml) |
+| Phoenix-2014T | 53.08 | 54.48 | 41.93 | 33.97 | 28.57 | [ckpt](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/EkpQzXWBrWxDruz6-U-V0kUBgit2vXsc40wLipV8YPLXaQ?e=Bru3oz) | [config](experiments/configs/SingleStream/phoenix-2014t_s2t.yaml) |
+| CSL-Daily | 53.35 | 53.53 | 40.68 | 31.04 | 24.09 |[ckpt](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/EudFBd-IzWJOngYdXVxox6kBI7ASATileGu8ncW-dBDi-w?e=YvKAKm) | [config](experiments/configs/SingleStream/csl-daily_s2t.yaml) |
 
 **Twostream-SLR**
 | Dataset | WER | Model | Training |
 | :---: | :---: | :---: | :---: | 
-| Phoenix-2014 | 18.8 | [ckpt]() | [config](experiments/configs/TwoStream/phoenix-2014_s2g.yaml) |
-| Phoenix-2014T | 19.3 | [ckpt]() | [config](experiments/configs/TwoStream/phoenix-2014t_s2g.yaml) |
-| CSL-Daily | 25.3 | [ckpt]() | [config](experiments/configs/TwoStream/csl-daily_s2g.yaml) |
+| Phoenix-2014 | 18.8 | [ckpt](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/Ek82sSjQiItKtztuEtpwWSMBnbIq4AJf_lEWNa3sOAT6Fg?e=JXMUgQ) | [config](experiments/configs/TwoStream/phoenix-2014_s2g.yaml) |
+| Phoenix-2014T | 19.3 | [ckpt](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/EtMUEBGyQ-1PkVh85I_I-MoBwpJaifdKrt0b9cHrXUHzSw?e=v1y7hQ) | [config](experiments/configs/TwoStream/phoenix-2014t_s2g.yaml) |
+| CSL-Daily | 25.3 | [ckpt](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/Ev9XdwEfIg9CqINHeNC2K0kB2-buEGf_Ef1yZoF2pKlT5w?e=dBx5gG) | [config](experiments/configs/TwoStream/csl-daily_s2g.yaml) |
 
 **Twostream-SLT**
 | Dataset | R | B1 | B2 | B3 | B4 | Model | Training |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| Phoenix-2014T | 53.48 | 54.90 | 42.43 | 34.46 | 28.95 | [ckpt]() | [config](experiments/configs/TwoStream/phoenix-2014t_s2t_ensemble.yaml) |
-| CSL-Daily | 55.72 | 55.44 | 42.59 | 32.87 | 25.79 | [ckpt]() | [config](experiments/configs/TwoStream/csl-daily_s2t_ensemble.yaml) |
+| Phoenix-2014T | 53.48 | 54.90 | 42.43 | 34.46 | 28.95 | [video](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/EphztyWWWudGjNoPugO53MYBNuv7FUATs1gpUufdtgrAow?e=J28eLg)/[keypoint](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/Eq34FYe33qlKpxWGM089rq8BFDM_hkd7b8ewgpg1RTpb9Q?e=dVw8LZ)/[joint](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/Et0ZNVTztKFEqpbOjotlfx4BtiIykhw27U6zQ3LQAJiRkQ?e=sgpB1q) | [config](experiments/configs/TwoStream/phoenix-2014t_s2t_ensemble.yaml) |
+| CSL-Daily | 55.72 | 55.44 | 42.59 | 32.87 | 25.79 | [video](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/EmSUuTojKAZIpy90aA75s00BBOrlZyhkvFBNsbibtgx5mg?e=0MPPEn)/[keypoint](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/EuZpa5hRV6tMvRFWngg86VUBi01T5GpQ5fkIfKHh571dbw?e=HRTaEG)/[joint](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/EvAcRN1wDg5JmwdcojaGICMByzgNgq7CJFOqVTXQgV8Rrg?e=46Em1S) | [config](experiments/configs/TwoStream/csl-daily_s2t_ensemble.yaml) |
 
 ## Usage
 ### Prerequisites
@@ -53,13 +53,13 @@ Download datasets from their websites and place them under the corresponding dir
 Then run [preprocess/preprocess_video.sh](preprocess/preprocess_video.sh) to extract the downloaded videos. 
 
 **Pretrained Models**
-We provide pretrained models [here](). Download this directory and place it as *pretrained_models*. Specifically, the required pretrained models include:
+We provide pretrained models [here](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/EolDU7j15xROncGg8QqLpkABn9mFEfriS0owcyr048nyXg?e=jHdxlg). Download this directory and place it as *pretrained_models*. Specifically, the required pretrained models include:
 * *s3ds_actioncls_ckpt*: S3D backbone pretrained on Kinetics-400. (From [https://github.com/kylemin/S3D](https://github.com/kylemin/S3D). Thanks for their implementation!)
 * *s3ds_glosscls_ckpt*: S3D backbone pretrained on Kinetics-400 and WLASL.
 * *mbart_de* / *mbart_zh* : pretrained language models used to initialize the translation network for German and Chinese, with weights from [mbart-cc-25](https://huggingface.co/facebook/mbart-large-cc25). We prune mbart's original word embedding by preserving only German or Chinese tokens to avoid GPU out-of-memory. We also compute gloss embeddings by averaging mBart-pretrained embeddings of all sub-tokens of the gloss. (See [utils/prune_embedding.ipynb](utils/prune_embedding.ipynb))
 
 **Keypoints** (Only needed in TwoStream)
-We provide [human keypoints]() for three datasets pre-extracted by HRNet. Please download them and place them under *data/phoenix-2014t(phoenix-2014 or csl-daily)*.
+We provide human keypoints for three datasets, [Phoenix-2014](https://hkustconnect-my.sharepoint.com/:u:/g/personal/rzuo_connect_ust_hk/EX4hzndQCiNGlZTlQymJlKgB9l3tBHi2ihKh0b1nrO-4Lg?e=QXUrrP), [Phoenix-2014T](https://hkustconnect-my.sharepoint.com/:u:/g/personal/rzuo_connect_ust_hk/EdCvVpXswSJKlj4FUYUJJ9EBm1cqFBOBMloVRqSTpng7dQ?e=EH6YfR), and [CSL-Daily](https://hkustconnect-my.sharepoint.com/:u:/g/personal/rzuo_connect_ust_hk/Eanp_XYZnmVNiqRlNIQJf6kBkIDst176O2vkPNZDGnmbWw?e=0P8aiq), pre-extracted by HRNet. Please download them and place them under *data/phoenix-2014t(phoenix-2014 or csl-daily)*.
 
 
 ### Training and Evaluation

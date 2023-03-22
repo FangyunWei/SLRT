@@ -11,17 +11,17 @@ There exists a lot of visually indistinguishable signs (VISigns) in current SLR 
 
 | Dataset | P-I Top1 | P-I Top5 | P-C Top1 | P-C Top5 | Ckpt | Training |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| WLASL-2000 | 61.26 | 91.77 | 58.31 | 90.91 | [Google](https://drive.google.com/drive/folders/1u2HOEXnZHFm6-F2NLFgRbLXlEe_iCbU8?usp=share_link)/[Baidu](https://pan.baidu.com/s/16Dl82PJFThv6McITf8MeWQ?pwd=brcz) | [config](configs/nla_slr_wlasl_2000.yaml) |
-| WLASL-1000 | 75.64 | 94.62 | 75.72 | 94.65 | [Google](https://drive.google.com/drive/folders/1NjmtlBdLzxhoJQMzQHupim461R3M4UDt?usp=share_link)/[Baidu](https://pan.baidu.com/s/1IY5aPrab0ZtHFfu4YFKl7Q?pwd=fi1s) | [config](configs/nla_slr_wlasl_1000.yaml) |
-| WLASL-300 | 86.98 | 97.60 | 87.33 | 97.81 | [Google](https://drive.google.com/drive/folders/1SRGerA29ZB28MgtKV9MGprKyIfQWNtLn?usp=share_link)/[Baidu](https://pan.baidu.com/s/1YRtsLyxb11vpvZSHeln57Q?pwd=xb5c) | [config](configs/nla_slr_wlasl_300.yaml) |
-| WLASL-100 | 92.64 | 96.90 | 93.08 | 97.17 | [Google](https://drive.google.com/drive/folders/1m5ED3ZntNuKStQldsHpG0FctVylGnDPx?usp=share_link)/[Baidu](https://pan.baidu.com/s/1h9omKOSJYvcwG_0AWudnLQ?pwd=u8p3) | [config](configs/nla_slr_wlasl_100.yaml) |
-| MSASL-1000 | 73.80 | 89.65 | 70.95 | 89.07 | [Google](https://drive.google.com/drive/folders/1yeNlVNkEtroHgHLFAUdCjM5z1Ms-Gwp1?usp=share_link)/[Baidu](https://pan.baidu.com/s/1YbOmqablXwydvv_IRQ3Fbg?pwd=r4ni) | [config](configs/nla_slr_msasl_1000.yaml) |
-| MSASL-500 | 82.90 | 93.46 | 83.06 | 93.54 | [Google](https://drive.google.com/drive/folders/15DNSzY0D1J-Tz-ZFTAHWGjdl4514cl9v?usp=share_link)/[Baidu](https://pan.baidu.com/s/19wh7B5AhhYRc8QP7fZy3oQ?pwd=mw9m) | [config](configs/nla_slr_msasl_500.yaml) |
-| MSASL-200 | 89.48 | 96.69 | 89.86 | 96.93 | [Google](https://drive.google.com/drive/folders/1tmhkoHoUxxFKEHVSKUUeL4F6tpl9ZO6Y?usp=share_link)/[Baidu](https://pan.baidu.com/s/1s0HrP3RuBcQn2ckgsGN7EA?pwd=x3r7) | [config](configs/nla_slr_msasl_200.yaml) |
-| MSASL-100 | 91.02 | 97.89 | 91.24 | 98.19 | [Google](https://drive.google.com/drive/folders/16EHXRukQ6KrsiupO9sdfdW81OQldjZd7?usp=share_link)/[Baidu](https://pan.baidu.com/s/1eUqY5vDBKQr14gYqlm-wtQ?pwd=6us1) | [config](configs/nla_slr_msasl_100.yaml) |
-| NMFs-CSL | 83.7 | 98.5 | -- | -- | [Google](https://drive.google.com/drive/folders/1P3bK6R92n7ijiD4lxffMaTOl1Lf6TlRI?usp=share_link)/[Baidu](https://pan.baidu.com/s/1qhQLPlQGW9zZkOf-OkB7LQ?pwd=mv1g) | [config](configs/nla_slr_nmf.yaml) |
+| WLASL-2000 | 61.26 | 91.77 | 58.31 | 90.91 | [OneDrive](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/EhR1iEfa7MpGuQ4hnKiPN4wB-NwWEfDH0dzZUdu4eUYOwg?e=ghtdJU)/[Baidu](https://pan.baidu.com/s/16Dl82PJFThv6McITf8MeWQ?pwd=brcz) | [config](configs/nla_slr_wlasl_2000.yaml) |
+| WLASL-1000 | 75.64 | 94.62 | 75.72 | 94.65 | [OneDrive](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/EkxYtFaTXzdPveWTsmW_2GoB0pJVLkHbSbfLP4LIWb6Olg?e=hk0neS)/[Baidu](https://pan.baidu.com/s/1IY5aPrab0ZtHFfu4YFKl7Q?pwd=fi1s) | [config](configs/nla_slr_wlasl_1000.yaml) |
+| WLASL-300 | 86.98 | 97.60 | 87.33 | 97.81 | [OneDrive](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/EiACoQ3dgP5IuXFmY74wnPABKHA2cuojpiqQdTG-ToB5xg?e=liV5l9)/[Baidu](https://pan.baidu.com/s/1YRtsLyxb11vpvZSHeln57Q?pwd=xb5c) | [config](configs/nla_slr_wlasl_300.yaml) |
+| WLASL-100 | 92.64 | 96.90 | 93.08 | 97.17 | [OneDrive](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/ErxKSls_d_BAlbCPsN3AOWcBNnHQ1YydTrdJzwaDKZBYkg?e=DRVtZr)/[Baidu](https://pan.baidu.com/s/1h9omKOSJYvcwG_0AWudnLQ?pwd=u8p3) | [config](configs/nla_slr_wlasl_100.yaml) |
+| MSASL-1000 | 73.80 | 89.65 | 70.95 | 89.07 | [OneDrive](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/Egss6sJoojlOul47Q2Mf5Y8B-gnbhIu-Lo9PoUoclER6Tg?e=ukn9Bu)/[Baidu](https://pan.baidu.com/s/1YbOmqablXwydvv_IRQ3Fbg?pwd=r4ni) | [config](configs/nla_slr_msasl_1000.yaml) |
+| MSASL-500 | 82.90 | 93.46 | 83.06 | 93.54 | [OneDrive](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/Elllx63j_ptOozN6uHt2IIkBVKmPvw5oUeARWXyndYCA3Q?e=aoVP22)/[Baidu](https://pan.baidu.com/s/19wh7B5AhhYRc8QP7fZy3oQ?pwd=mw9m) | [config](configs/nla_slr_msasl_500.yaml) |
+| MSASL-200 | 89.48 | 96.69 | 89.86 | 96.93 | [OneDrive](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/Eqega94so2JBrwtU8H7Cyi4BfarxXh0U6GEkWo9E5ci6oA?e=T3pxyI)/[Baidu](https://pan.baidu.com/s/1s0HrP3RuBcQn2ckgsGN7EA?pwd=x3r7) | [config](configs/nla_slr_msasl_200.yaml) |
+| MSASL-100 | 91.02 | 97.89 | 91.24 | 98.19 | [OneDrive](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/EuR4Cadp8XJEmBKJy_6S1gEBiG2YV7JE9LfRDxWYXFIakg?e=bg9ptD)/[Baidu](https://pan.baidu.com/s/1eUqY5vDBKQr14gYqlm-wtQ?pwd=6us1) | [config](configs/nla_slr_msasl_100.yaml) |
+| NMFs-CSL | 83.7 | 98.5 | -- | -- | [OneDrive](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/Eg_SSR-UYnlFm1RzN_AWtIwBS4s3rd5Awb3e4fMQwXsGSw?e=XymJNe)/[Baidu](https://pan.baidu.com/s/1qhQLPlQGW9zZkOf-OkB7LQ?pwd=mv1g) | [config](configs/nla_slr_nmf.yaml) |
 
-More checkpoints, e.g., single streams and VKNet-64/32, are available at [Google](https://drive.google.com/drive/folders/1kxZidDpjTEYC-I1X_apTBM8PQyLVHki-?usp=share_link)/[Baidu](https://pan.baidu.com/s/1dkbs0JqWukXMoY6gwV-XLw?pwd=up4z).
+More checkpoints, e.g., single streams and VKNet-64/32, are available at [OneDrive](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/ErKHcJhsiAdKgkm2djnFAcoBJt4NC0UG3TtvhJ9EAjfc5Q?e=3wvFh1)/[Baidu](https://pan.baidu.com/s/1dkbs0JqWukXMoY6gwV-XLw?pwd=up4z).
 
 ## Usage
 ### Environment
@@ -56,7 +56,7 @@ python -m torch.distributed.launch --nproc_per_node 8 --master_port 29999 --use_
 Download S3D pretrained on K400 from [here](https://github.com/kylemin/S3D).
 Put it in `../../pretrained_models/s3ds_actioncls_ckpt`
 
-Split files, word embeddings, and keypoints are available at: WLASL ([Google](https://drive.google.com/drive/folders/1artt_YC1gLjvRNNXXK7s6rsXXtz7TC-p?usp=share_link)/[Baidu](https://pan.baidu.com/s/1G85Yum_SMjpWm3SlH_xBDw?pwd=9ry8)), MSASL ([Google](https://drive.google.com/drive/folders/1MUeibt9fXR4Vmmgqznanhxl_DbtX4BiX?usp=share_link)/[Baidu](https://pan.baidu.com/s/1xoUoqG3rUNHM_z3elLcVoQ?pwd=mvhw)), NMFs-CSL ([Google](https://drive.google.com/drive/folders/1XgtSkj_vmnieshw7kdmej_ea9g-aIEaM?usp=share_link)/[Baidu](https://pan.baidu.com/s/10FGUodoygZkzW5G1QDKyAw?pwd=w4ro)).
+Split files, word embeddings, and keypoints are available at: WLASL ([OneDrive](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/EscNEp4RnyZOtJ-HuF8Qm9EB4KGBF72J2GjhwKdrxmN1Kg?e=VgAS8v)/[Baidu](https://pan.baidu.com/s/1G85Yum_SMjpWm3SlH_xBDw?pwd=9ry8)), MSASL ([OneDrive](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/EqKd-5xbWLZOqAS-v_4yilEBivjPL2-OCaJZXD6e_BR2Xg?e=cQSHwm)/[Baidu](https://pan.baidu.com/s/1xoUoqG3rUNHM_z3elLcVoQ?pwd=mvhw)), NMFs-CSL ([OneDrive](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/Eu6D8qSnTFxMut3JYeBFyDIBW8MvKsh6jeyLH1mHfRmvnw?e=TaeJxr)/[Baidu](https://pan.baidu.com/s/10FGUodoygZkzW5G1QDKyAw?pwd=w4ro)).
 
 
 ### Training
