@@ -101,11 +101,10 @@ python -m torch.distributed.launch --nproc_per_node 1 --master_port 29999 --use_
 
 ## Citations
 ```
-@inproceedings{
-    zuo2023nla-slr,
-    title={Natual Language-Assisted Sign Language Recognition},
-    author={Ronglai Zuo and Fangyun Wei and Brian Mak},
-    booktitle={CVPR},
-    year={2023}
+@inproceedings{zuo2023natural,
+  title={Natural Language-Assisted Sign Language Recognition},
+  author={Zuo, Ronglai and Wei, Fangyun and Mak, Brian},
+  booktitle={CVPR},
+  year={2023}
 }
 ```
