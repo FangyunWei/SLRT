@@ -13,6 +13,13 @@ This repo contains the offical implementations of the following papers on sign l
 ## Citation
 Please cite our works if you find this repo is helpful.
 ```
+@inproceedings{zuo2023nla-slr,
+  title={Natural Language-Assisted Sign Language Recognition},
+  author={Zuo, Ronglai and Wei, Fangyun and Mak, Brian},
+  booktitle={CVPR},
+  year={2023}
+}
+
 @article{chen2022two,
 title={Two-Stream Network for Sign Language Recognition and Translation},
   author={Chen, Yutong and Zuo, Ronglai and Wei, Fangyun and Wu, Yu and Liu, Shujie and Mak, Brian},
