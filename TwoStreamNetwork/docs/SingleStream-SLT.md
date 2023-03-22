@@ -2,8 +2,8 @@
 
 | Dataset | R | B1 | B2 | B3 | B4 | Model | Training |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| Phoenix-2014T | 53.08 | 54.48 | 41.93 | 33.97 | 28.57 | [ckpt](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/EkpQzXWBrWxDruz6-U-V0kUBgit2vXsc40wLipV8YPLXaQ?e=Bru3oz) | [config](experiments/configs/SingleStream/phoenix-2014t_s2t.yaml) |
-| CSL-Daily | 53.35 | 53.53 | 40.68 | 31.04 | 24.09 |[ckpt](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/EudFBd-IzWJOngYdXVxox6kBI7ASATileGu8ncW-dBDi-w?e=YvKAKm) | [config](experiments/configs/SingleStream/csl-daily_s2t.yaml) |
+| Phoenix-2014T | 53.08 | 54.48 | 41.93 | 33.97 | 28.57 | [ckpt](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/EkpQzXWBrWxDruz6-U-V0kUBgit2vXsc40wLipV8YPLXaQ?e=Bru3oz) | [config](../experiments/configs/SingleStream/phoenix-2014t_s2t.yaml) |
+| CSL-Daily | 53.35 | 53.53 | 40.68 | 31.04 | 24.09 |[ckpt](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/EudFBd-IzWJOngYdXVxox6kBI7ASATileGu8ncW-dBDi-w?e=YvKAKm) | [config](../experiments/configs/SingleStream/csl-daily_s2t.yaml) |
 
 
 ## Pretraining
