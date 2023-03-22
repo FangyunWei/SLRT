@@ -13,7 +13,7 @@ This repo contains the offical implementations of the following papers on sign l
 ## Citation
 Please cite our works if you find this repo is helpful.
 ```
-@inproceedings{zuo2023nla-slr,
+@inproceedings{zuo2023natural,
   title={Natural Language-Assisted Sign Language Recognition},
   author={Zuo, Ronglai and Wei, Fangyun and Mak, Brian},
   booktitle={CVPR},
