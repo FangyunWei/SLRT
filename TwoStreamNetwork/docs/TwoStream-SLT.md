@@ -19,7 +19,7 @@ First, to compute features output by the TwoStream visual encoder, run
 ```
 python -m torch.distributed.launch --nproc_per_node 8 --use_env extract_feature.py --config experiments/configs/TwoStream/${dataset}_s2g.yaml
 ```
-We provide features extracted by our trained checkpoints [here]().
+We provide features extracted by our trained checkpoints for [Phoenix-2014T](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/Eu5cV-7VnZNAgGnSBLHh2b0BnJkSyLagpfDeIjSX-GXqjw?e=Ztxk3d), and [CSL-Daily](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/EqwZKuG0gHJKpfIW1bjomT8BUxEfoh4P0wrWMba8L9Vn0w?e=C7AX2Y).
 
 We seperately train three Sign2Text networks using outputs of the video head, keypoint head and joint head respectively.
 ```
@@ -40,4 +40,4 @@ python -m torch.distributed.launch --nproc_per_node 1 --use_env prediction.py --
 ```
 
 ## Checkpoints
-We provide checkpoints trained by each stage [here]().
+We provide checkpoints trained by each stage [here](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/EpyVs_YNq2NKrxn0FPJJWF4BtS7O1wTrOEa2ZvMwT2OU-g?e=u0sQab).

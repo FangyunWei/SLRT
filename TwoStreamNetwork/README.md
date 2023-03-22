@@ -70,15 +70,13 @@ We provide human keypoints for three datasets, [Phoenix-2014](https://hkustconne
 
 ## Citations
 ```
-@inproceedings{
-    chen2022twostream,
-    title={Two-Stream Network for Sign Language Recognition and Translation},
-    author={Yutong Chen and Ronglai Zuo and Fangyun Wei and Yu Wu and Shujie LIU and Brian Mak},
-    booktitle={Advances in Neural Information Processing Systems},
-    editor={Alice H. Oh and Alekh Agarwal and Danielle Belgrave and Kyunghyun Cho},
-    year={2022},
-    url={https://openreview.net/forum?id=hSxK-4KGLbI}
+@article{chen2022two,
+title={Two-Stream Network for Sign Language Recognition and Translation},
+  author={Chen, Yutong and Zuo, Ronglai and Wei, Fangyun and Wu, Yu and Liu, Shujie and Mak, Brian},
+  journal={NeurIPS},
+  year={2022}
 }
+
 @InProceedings{
     Chen_2022_CVPR,
     author    = {Chen, Yutong and Wei, Fangyun and Sun, Xiao and Wu, Zhirong and Lin, Stephen},

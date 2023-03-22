@@ -27,4 +27,4 @@ python -m torch.distributed.launch --nproc_per_node 8 --use_env training.py --co
 python -m torch.distributed.launch --nproc_per_node 1 --use_env prediction.py --config experiments/configs/TwoStream/${dataset}_s2g.yaml
 ```
 ## Checkpoints
-We provide checkpoints trained by each stage [here].()
+We provide checkpoints trained by each stage [here](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/EpyVs_YNq2NKrxn0FPJJWF4BtS7O1wTrOEa2ZvMwT2OU-g?e=u0sQab).

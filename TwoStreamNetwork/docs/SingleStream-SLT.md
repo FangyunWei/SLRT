@@ -28,7 +28,7 @@ First, to extract features output by the pretrained S3D, run
 ```
 python -m torch.distributed.launch --nproc_per_node 8 --use_env extract_feature.py --config experiments/configs/SingleStream/${dataset}_s2g.yaml
 ```
-We provide our pre-extracted features [here]().
+We provide our pre-extracted features for [Phoenix-2014T](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/EndgQUATcNRCj0pTKPNMA_kBxSE9iJSONqj1zq1kQAAn5g?e=BgbJCK) and [CSL-Daily](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/EjbL5fTAZbxOmGA5x7px8s8BbyJ4ml5e5TROB-GEWPXeBQ?e=Ks7GfH).
 
 For multi-modal joint training, run
 
@@ -43,4 +43,4 @@ To evaluate Sign2Text performance, run
 python -m torch.distributed.launch --nproc_per_node 1 --use_env prediction.py --config experiments/configs/SingleStream/${dataset}_s2t.yaml
 ```
 ## Checkpoints
-We provide checkpoints trained by each stage [here]().
+We provide checkpoints trained by each stage [here](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/EuJlnAhX7h9NnvFZhQH-_fcBtV8lbnj2CphiuidhhcU69w?e=eOsQ4B).
