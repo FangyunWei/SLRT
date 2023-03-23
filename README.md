@@ -20,7 +20,7 @@ Please cite our works if you find this repo is helpful.
   year={2023}
 }
 
-@inproceedings{zuo2023natural,
+@inproceedings{cheng2023cico,
   title={CiCo: Domain-Aware Sign Language Retrieval via Cross-Lingual Contrastive Learning},
   author={Cheng, Yiting and Wei, Fangyun and Jianmin, Bao and Chen, Dong and Zhang, Wen Qiang},
   booktitle={CVPR},
