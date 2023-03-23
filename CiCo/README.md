@@ -1,4 +1,4 @@
-# [NeurIPS XXX] Papaer title
+# [CVPR 2023] CiCo: Domain-Aware Sign Language Retrieval via Cross-Lingual Contrastive Learning
 
 ## Introduction
 
