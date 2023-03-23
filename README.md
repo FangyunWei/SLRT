@@ -4,7 +4,7 @@ This repo contains the offical implementations of the following papers on sign l
 
 - [CVPR 2023] Natural Language-Assisted Sign Language Recognition [[Paper]](https://arxiv.org/abs/2303.12080) [[Code]](https://github.com/FangyunWei/SLRT/tree/main/NLA-SLR)
 
-- [CVPR 2023] CiCo: Domain-Aware Sign Language Retrieval via Cross-Lingual Contrastive Learning [[Paper]](TBD) [[Code]](https://github.com/FangyunWei/SLRT/tree/main/CiCo)
+- [CVPR 2023] CiCo: Domain-Aware Sign Language Retrieval via Cross-Lingual Contrastive Learning [[Paper]](https://arxiv.org/abs/2303.12793) [[Code]](https://github.com/FangyunWei/SLRT/tree/main/CiCo)
 
 - [NeurIPS 2022] Two-Stream Network for Sign Language Recognition and Translation [[Paper]](https://arxiv.org/abs/2211.01367) [[Code]](https://github.com/FangyunWei/SLRT/tree/main/TwoStreamNetwork)
 
@@ -16,6 +16,13 @@ Please cite our works if you find this repo is helpful.
 @inproceedings{zuo2023natural,
   title={Natural Language-Assisted Sign Language Recognition},
   author={Zuo, Ronglai and Wei, Fangyun and Mak, Brian},
+  booktitle={CVPR},
+  year={2023}
+}
+
+@inproceedings{zuo2023natural,
+  title={CiCo: Domain-Aware Sign Language Retrieval via Cross-Lingual Contrastive Learning},
+  author={Cheng, Yiting and Wei, Fangyun and Jianmin, Bao and Chen, Dong and Zhang, Wen Qiang},
   booktitle={CVPR},
   year={2023}
 }
