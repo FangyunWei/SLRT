@@ -1,0 +1,7 @@
+name: bsl1k_env
+
+dependencies:
+  - pip
+  - opencv
+  - python
+  - pytorch=1.4
