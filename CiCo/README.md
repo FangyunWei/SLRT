@@ -42,6 +42,7 @@ pip install -r requirements.txt
 ```
 ## Data Preparation
 **How2Sign**
+
 To use the How2Sign dataset, please download the raw videos it from [link](https://how2sign.github.io/#download)(Green Screen RGB videos (frontal view)). Then re-aglin and crop videos with:
 ```sh
 python data_preparation/reaglined_and_crop.py --video_dir 'path_to_H2S_raw_videos'  --output_dir ./data/How2Sign/processed_videos --split train
@@ -49,11 +50,13 @@ python data_preparation/reaglined_and_crop.py --video_dir 'path_to_H2S_raw_video
 ```
 
 **PHOENIX2014T**
+
 To use the PHOENIX2014T dataset, please download it from [here](https://www-i6.informatik.rwth-aachen.de/ftp/pub/rwth-phoenix/2016/phoenix-2014-T.v3.tar.gz). Then prepare the dataset with:
 ```sh
 python data_preparation/gather_frames.py --input_path  'path_to_phoenix_2014T_images' --output_path data/phoenix_2014T
 ```
 **CSL-Daily**
+
 To use the CSL-Daily dataset, please download it from [here](http://home.ustc.edu.cn/~zhouh156/dataset/csl-daily/). Then prepare the dataset with:
 
 ```sh
@@ -67,6 +70,7 @@ The training of our framework consists of two disjoint parts: (1) training the d
 
 ### Quick start for CLCL training
 **Prepare sign features**
+
 Please download the domain-agnostic sign encoder provided by [bslattend](https://arxiv.org/pdf/2103.16481.pdf) from [here](https://www.robots.ox.ac.uk/~vgg/research/bslattend/data/bsl5k.pth.tar), and our pre-trained domain-aware sign encoder from [Google Drive](https://drive.google.com/file/d/1TbX3UjaUvXhsXSQX2UAm81nitt8tsgLq/view?usp=share_link) or [BaiduCloud](https://pan.baidu.com/s/1VnpR7EsKRxuJ5f_m905EWQ)(code:7k6i), and  place them under `I3D_feature_extractor/chpt`. 
 Then you can extract features of sign-videos by running following commands:
 ```sh
@@ -81,14 +85,17 @@ python -m torch.distributed.launch --nproc_per_node=4 main_task_retrieval.py --d
 ```
 ### Sign encoder training
 **Prepare domain-agnostic sign encoder**
+
 Please download the domain-agnostic sign encoder provided by [bslattend](https://arxiv.org/pdf/2103.16481.pdf) from [here](https://www.robots.ox.ac.uk/~vgg/research/bslattend/data/bsl5k.pth.tar) and  place it under `I3D_feature_extractor/chpt`. 
+
 **Generate pseudo label**
+
 You can generate pseudo labels by running following commands:
 ```
 cd I3D_feature_extractor
 python get_pseudos.py
 ```
-**Train domain-aware sign dncoder **
+**Train domain-aware sign dncoder**
 ```
 cd I3D_trainer
 python main.py --pretrained ../I3D_feature_extractor/chpt/bsl5k.pth.tar --checkpoint  'path_to_save_checkpoints'
