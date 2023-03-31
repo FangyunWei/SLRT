@@ -106,7 +106,7 @@ Once you have completed the training process, you can proceed with the CLCL trai
 
 ## Testing
 
-Please download the sign features of sign-videos from [Google Drive](https://drive.google.com/file/d/1Vb-HFZd-rhjN49sB5WwLRpIbyhiC6xTy/view?usp=share_link) or [BaiduCloud](https://pan.baidu.com/s/1m9LlFm7hnFII0rOOzdg14g)(code:l7wc) and place them under `CLCL/sign_features`, download the pre-trained CLCL module checkponit from [Google Drive](https://drive.google.com/file/d/1Hpcn5obCcG5JHa3nLvHqX9pfrp7g6wDu/view?usp=share_link) or [BaiduCloud](https://pan.baidu.com/s/17UoHFmUVayuSjIlgTrRBIw)(code:a0h7) and place it under `CLCL/chpt`.
+Please download the sign features of sign-videos from [Google Drive](https://drive.google.com/file/d/1Vb-HFZd-rhjN49sB5WwLRpIbyhiC6xTy/view?usp=share_link) or [BaiduCloud](https://pan.baidu.com/s/1m9LlFm7hnFII0rOOzdg14g)(code:l7wc) and place them under `CLCL/sign_feature`, download the pre-trained CLCL module checkponit from [Google Drive](https://drive.google.com/file/d/1Hpcn5obCcG5JHa3nLvHqX9pfrp7g6wDu/view?usp=share_link) or [BaiduCloud](https://pan.baidu.com/s/17UoHFmUVayuSjIlgTrRBIw)(code:a0h7) and place it under `CLCL/chpt`.
 - How2Sign 
 ```sh
 cd CLCL
