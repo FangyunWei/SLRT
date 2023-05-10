@@ -20,7 +20,6 @@ For Gloss2Text pretraining, run
 ```
 python -m torch.distributed.launch -nproc_per_node 8  --use_env training.py --config experiments/configs/SingleStream/${dataset}_g2t.yaml
 ```
-(checkpoints missing, re-produce)
 
 ## Multi-modal Joint Training
 
