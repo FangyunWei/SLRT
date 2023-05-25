@@ -98,6 +98,7 @@ python get_pseudos.py
 **Train domain-aware sign dncoder**
 ```
 cd I3D_trainer
+python generate_data_info.py --pseudo_path pseudo_h2s
 python main.py --pretrained ../I3D_feature_extractor/chpt/bsl5k.pth.tar --checkpoint  'path_to_save_checkpoints'
 ```
 
