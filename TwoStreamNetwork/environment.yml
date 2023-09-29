@@ -164,7 +164,6 @@ dependencies:
     - idna==2.8
     - imageio==2.13.5
     - imageio-ffmpeg==0.4.5
-    - imagenetv2-pytorch==0.1
     - importlib-metadata==1.5.0
     - importlib-resources==5.4.0
     - iopath==0.1.9
