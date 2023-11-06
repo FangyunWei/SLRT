@@ -41,4 +41,12 @@ title={Two-Stream Network for Sign Language Recognition and Translation},
   pages={5120--5130},
   year={2022}
 }
+
+@inproceedings{wei2023improving,
+  title={Improving Continuous Sign Language Recognition with Cross-Lingual Signs},
+  author={Wei, Fangyun and Chen, Yutong},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={23612--23621},
+  year={2023}
+}
 ```
