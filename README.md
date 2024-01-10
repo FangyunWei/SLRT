@@ -1,6 +1,6 @@
 # Sign Language Understanding
 
-This repo contains the offical implementations of the following papers on sign language understanding:
+This repo contains the official implementations of the following papers on sign language understanding:
 
 - [CVPR 2023] Natural Language-Assisted Sign Language Recognition [[Paper]](https://arxiv.org/abs/2303.12080) [[Code]](https://github.com/FangyunWei/SLRT/tree/main/NLA-SLR)
 
