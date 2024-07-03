@@ -57,7 +57,7 @@ Related add-ons are avaialble [here](https://hkustconnect-my.sharepoint.com/:f:/
 Please put the them into ../../pretrained_models/. 
 
 ### 3D Dictionary and Video IDs
-You can download the estimated 3D dictionary ([link](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/ElzHt-8ILItGiieh8mr6KtcBDtjMRSYB037h0hvN-K0uqQ?e=ICFhQm)) and video IDs ([link](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/EtQfT9E5fb5AsrnWgRZc6fsBth_-Mh63rMc45T1GxAbFAA?e=doHGss)).
+You can download the estimated 3D dictionary ([link](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/ElzHt-8ILItGiieh8mr6KtcBDtjMRSYB037h0hvN-K0uqQ?e=ICFhQm)) and video IDs ([link](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/EtQfT9E5fb5AsrnWgRZc6fsBth_-Mh63rMc45T1GxAbFAA?e=0xPsKg)).
 
 
 ## Training
