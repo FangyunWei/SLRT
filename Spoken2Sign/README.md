@@ -53,7 +53,7 @@ Please download the models (mano, smpl, smplh, and smplx) from [here](https://hk
 
 ### SMPL-X Blender Add-on
 Rendering 3D avatars relies on [Blender](https://www.blender.org/download/) (you don't need to download it if you use my docker image) and [SMPL-X add-on](https://smpl-x.is.tue.mpg.de/download.php).
-Related add-ons are avaialble [here](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/EowLQ129uu1Oj3YOtwmb85YBEQjrxnFS97mB9e8fzUTZRw?e=ZRzzap).
+Related add-ons are available [here](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/EowLQ129uu1Oj3YOtwmb85YBEQjrxnFS97mB9e8fzUTZRw?e=ZRzzap).
 Please put the them into ../../pretrained_models/. 
 
 ### 3D Dictionary and Video IDs

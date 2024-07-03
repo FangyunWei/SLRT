@@ -2,6 +2,8 @@
 
 This repo contains the official implementations of the following papers on sign language understanding:
 
+- [ECCV 2024] A Simple Baseline for Spoken Language to Sign Language Translation with 3D Avatars [[Paper]](https://arxiv.org/abs/2401.04730) [[Code]](https://github.com/FangyunWei/SLRT/tree/main/Spoken2Sign)
+
 - [CVPR 2023] Natural Language-Assisted Sign Language Recognition [[Paper]](https://arxiv.org/abs/2303.12080) [[Code]](https://github.com/FangyunWei/SLRT/tree/main/NLA-SLR)
 
 - [CVPR 2023] CiCo: Domain-Aware Sign Language Retrieval via Cross-Lingual Contrastive Learning [[Paper]](https://arxiv.org/abs/2303.12793) [[Code]](https://github.com/FangyunWei/SLRT/tree/main/CiCo)
@@ -13,6 +15,13 @@ This repo contains the official implementations of the following papers on sign 
 ## Citation
 Please cite our works if you find this repo is helpful.
 ```
+@inproceedings{zuo2024simple,
+  title={A Simple Baseline for Spoken Language to Sign Language Translation with 3D Avatars},
+  author={Zuo, Ronglai and Wei, Fangyun and Chen, Zenggui and Mak, Brian and Yang, Jiaolong and Tong, Xin},
+  booktitle={ECCV},
+  year={2024}
+}
+
 @inproceedings{zuo2023natural,
   title={Natural Language-Assisted Sign Language Recognition},
   author={Zuo, Ronglai and Wei, Fangyun and Mak, Brian},
