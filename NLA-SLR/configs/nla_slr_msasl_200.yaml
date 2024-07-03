@@ -6,16 +6,16 @@ data:
     - keypoint
     - rgb
     - rgb
-  keypoint_file: ../../data/msasl/keypoints_hrnet_dark_coco_wholebody.pkl
+  keypoint_file: ../../data/MSASL/keypoints_hrnet_dark_coco_wholebody.pkl
   use_keypoints:
     - pose
     - mouth_half
     - hand
-  zip_file: ../../data/msasl/msasl_frames1.zip
-  word_emb_file: ../../data/msasl/msasl_word_embeddings_fasttext.pkl
-  train: ../../data/msasl/train.pkl
-  dev: ../../data/msasl/dev.pkl
-  test: ../../data/msasl/test.pkl
+  zip_file: ../../data/MSASL/msasl_frames1.zip
+  word_emb_file: ../../data/MSASL/msasl_word_embeddings_fasttext.pkl
+  train: ../../data/MSASL/train.pkl
+  dev: ../../data/MSASL/dev.pkl
+  test: ../../data/MSASL/test.pkl
   dataset_name: MSASL_200
   level: word #word or char
   txt_lowercase: true

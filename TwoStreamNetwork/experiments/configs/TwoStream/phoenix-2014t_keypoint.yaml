@@ -3,16 +3,16 @@ data:
   input_data: videos #features, gloss
   input_streams:
     - keypoint
-  keypoint_file: data/phoenix-2014t/phoenix-2014t-keypoints.pkl
+  keypoint_file: ../../data/phoenix-2014t/phoenix-2014t-keypoints.pkl
   use_keypoints:
     - pose 
     - mouth_half
     - hand
     - face_others_1_3
-  zip_file: data/phoenix-2014t/phoenix-2014t-videos.zip
-  train: data/phoenix-2014t/phoenix-2014t.train
-  dev: data/phoenix-2014t/phoenix-2014t.dev
-  test: data/phoenix-2014t/phoenix-2014t.test
+  zip_file: ../../data/phoenix-2014t/phoenix-2014t-videos.zip
+  train: ../../data/phoenix-2014t/phoenix-2014t.train
+  dev: ../../data/phoenix-2014t/phoenix-2014t.dev
+  test: ../../data/phoenix-2014t/phoenix-2014t.test
   dataset_name: phoenix-2014t
   level: word
   txt_lowercase: true
@@ -35,7 +35,7 @@ testing:
       beam_size: 5
 training:
   overwrite: True
-  model_dir: experiments/outputs/TwoStream/phoenix-2014t_keypoint
+  model_dir: results/phoenix-2014t_keypoint
   shuffle: True
   num_workers: 4
   batch_size: 1 
@@ -60,14 +60,14 @@ training:
 model:
   RecognitionNetwork:
     GlossTokenizer:
-      gloss2id_file: data/phoenix-2014t/gloss2ids.pkl
+      gloss2id_file: ../../data/phoenix-2014t/gloss2ids.pkl
     s3d:
-      pretrained_ckpt: pretrained_models/s3ds_actioncls_ckpt 
+      pretrained_ckpt: ../../pretrained_models/s3ds_actioncls_ckpt 
       use_block: 4
       freeze_block: 1
     keypoint_s3d:
       in_channel: 0 # placeholder
-      pretrained_ckpt: pretrained_models/s3ds_actioncls_ckpt 
+      pretrained_ckpt: ../../pretrained_models/s3ds_actioncls_ckpt 
       use_block: 4
       freeze_block: 0
     heatmap_cfg:

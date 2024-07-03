@@ -3,10 +3,10 @@ data:
   input_data: video 
   input_streams:
     - rgb
-  zip_file: data/phoenix-2014/phoenix-2014-videos.zip
-  train: data/phoenix-2014/phoenix-2014.train
-  dev: data/phoenix-2014/phoenix-2014.dev
-  test: data/phoenix-2014/phoenix-2014.test
+  zip_file: ../../data/phoenix-2014/phoenix-2014-videos.zip
+  train: ../../data/phoenix-2014/phoenix-2014.train
+  dev: ../../data/phoenix-2014/phoenix-2014.dev
+  test: ../../data/phoenix-2014/phoenix-2014.test
   dataset_name: phoenix-2014 
   level: word #word or char
   txt_lowercase: true
@@ -29,7 +29,7 @@ testing:
       beam_size: 5
 training:
   overwrite: True
-  model_dir: experiments/outputs/TwoStream/phoenix-2014_video
+  model_dir: results/phoenix-2014_video
   shuffle: True
   num_workers: 4
   batch_size: 1 
@@ -55,14 +55,14 @@ model:
   RecognitionNetwork:
     GlossTokenizer:
       lower_case: False
-      gloss2id_file: data/phoenix-2014/gloss2ids.pkl
+      gloss2id_file: ../../data/phoenix-2014/gloss2ids.pkl
     s3d:
-      pretrained_ckpt: pretrained_models/s3ds_actioncls_ckpt #from K400
+      pretrained_ckpt: ../../pretrained_models/s3ds_actioncls_ckpt #from K400
       use_block: 4
       freeze_block: 1
     keypoint_s3d:
       in_channel: 0 # placeholder
-      pretrained_ckpt: pretrained_models/s3ds_actioncls_ckpt #from K400
+      pretrained_ckpt: ../../pretrained_models/s3ds_actioncls_ckpt #from K400
       use_block: 4
       freeze_block: 0
     heatmap_cfg:

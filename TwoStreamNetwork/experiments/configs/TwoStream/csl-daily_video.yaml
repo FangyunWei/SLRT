@@ -1,16 +1,16 @@
 task: S2G
 data:
   input_data: videos #features, gloss
-  zip_file: data/csl-daily/csl-daily-videos.zip
+  zip_file: ../../data/csl-daily/csl-daily-videos.zip
   input_streams:
     - rgb  
   dataset_name: csl-daily
   level: char #word or char
   txt_lowercase: true
   max_sent_length: 400
-  train: data/csl-daily/csl-daily.train 
-  dev: data/csl-daily/csl-daily.dev
-  test: data/csl-daily/csl-daily.test
+  train: ../../data/csl-daily/csl-daily.train 
+  dev: ../../data/csl-daily/csl-daily.dev
+  test: ../../data/csl-daily/csl-daily.test
   transform_cfg:
     img_size: 224
     aug_hflip: false
@@ -35,7 +35,7 @@ testing:
 training:
   random_seed: 44
   overwrite: True
-  model_dir: experiments/outputs/TwoStream/csl-daily_video
+  model_dir: results/csl-daily_video
   shuffle: True
   num_workers: 4
   batch_size: 1 
@@ -60,9 +60,9 @@ training:
 model:
   RecognitionNetwork:
     GlossTokenizer:
-      gloss2id_file: data/csl-daily/gloss2ids.pkl
+      gloss2id_file: ../../data/csl-daily/gloss2ids.pkl
     s3d:
-      pretrained_ckpt: pretrained_models/s3ds_actioncls_ckpt
+      pretrained_ckpt: ../../pretrained_models/s3ds_actioncls_ckpt
       use_block: 4
       freeze_block: 1
     visual_head:

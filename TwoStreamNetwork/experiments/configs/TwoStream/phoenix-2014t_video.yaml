@@ -3,10 +3,10 @@ data:
   input_data: videos 
   input_streams:
     - rgb
-  zip_file: data/phoenix-2014t/phoenix-2014t-videos.zip
-  train: data/phoenix-2014t/phoenix-2014t.train
-  dev: data/phoenix-2014t/phoenix-2014t.dev
-  test: data/phoenix-2014t/phoenix-2014t.test
+  zip_file: ../../data/phoenix-2014t/phoenix-2014t-videos.zip
+  train: ../../data/phoenix-2014t/phoenix-2014t.train
+  dev: ../../data/phoenix-2014t/phoenix-2014t.dev
+  test: ../../data/phoenix-2014t/phoenix-2014t.test
   dataset_name: phoenix-2014t
   level: word #word or char
   txt_lowercase: true
@@ -30,7 +30,7 @@ testing:
       beam_size: 5
 training:
   overwrite: True
-  model_dir: experiments/outputs/TwoStream/phoenix-2014t_video
+  model_dir: results/phoenix-2014t_video
   shuffle: True
   num_workers: 4
   batch_size: 1 
@@ -55,9 +55,9 @@ training:
 model:
   RecognitionNetwork:
     GlossTokenizer:
-      gloss2id_file: data/phoenix-2014t/gloss2ids.pkl
+      gloss2id_file: ../../data/phoenix-2014t/gloss2ids.pkl
     s3d:
-      pretrained_ckpt: pretrained_models/s3ds_actioncls_ckpt 
+      pretrained_ckpt: ../../pretrained_models/s3ds_actioncls_ckpt 
       use_block: 4
       freeze_block: 1
     visual_head:
