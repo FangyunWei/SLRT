@@ -1,0 +1,97 @@
+task: T2G
+data:  
+  input_data: videos
+  input_streams:
+  - rgb
+  zip_file: ../../data/phoenix_2014t/PHOENIX2014T_videos.zip
+  dev: ../../data/phoenix_2014t/phoenix14t.dev
+  test: ../../data/phoenix_2014t/phoenix14t.test
+  train: ../../data/phoenix_2014t/phoenix14t.train
+  vocab_file: ../../data/phoenix_2014t/phoenix_iso_with_blank.vocab
+  dataset_name: phoenix
+  level: word
+  max_sent_length: 400
+  txt_lowercase: true
+  blank_as_mask: True
+testing:
+  cfg:
+    recognition:
+      beam_size: 1
+    translation:
+      length_penalty: 1
+      max_length: 100
+      num_beams: 5
+training:
+  batch_size: 8  #8
+  keep_last_ckpts: 1
+  # load_ckpt: results/phoenix-2014t_g2t/ckpts/best.ckpt
+  model_dir: results/T2G
+  num_workers: 4
+  optimization:
+    betas:
+    - 0.9
+    - 0.998
+    learning_rate:
+      default: 0.001
+      mapper: 0.001
+      translation: 1.0e-05
+    optimizer: Adam
+    scheduler: cosineannealing
+    t_max: 80
+    weight_decay: 0.001
+  overwrite: false
+  from_ckpt: true
+  random_seed: 17
+  shuffle: true
+  total_epoch: 80
+  validation:
+    cfg:
+      recognition:
+        beam_size: 1
+      translation:
+        length_penalty: 1
+        max_length: 100
+        num_beams: 5
+    freq: 1
+    unit: epoch
+model:
+  # RecognitionNetwork:
+  #   GlossTokenizer:
+  #     gloss2id_file: ../../data/phoenix_2014t/gloss2ids.pkl
+  #   fuse_method: empty
+  #   s3d:
+  #     freeze_block: 1
+  #     pretrained_ckpt: ../../pretrained_models/s3ds_actioncls_ckpt
+  #     use_block: 4
+  #   visual_head:
+  #     ff_kernelsize:
+  #     - 3
+  #     - 3
+  #     ff_size: 2048
+  #     hidden_size: 512
+  #     input_size: 832
+  #     pe: true
+  TranslationNetwork:
+    input_type: text
+    GlossEmbedding:
+      freeze: false
+      gloss2embed_file: ../../pretrained_models/mBart_de_t2g/gloss_embeddings.bin
+    GlossTokenizer:
+      gloss2id_file: ../../pretrained_models/mBart_de_t2g/gloss2ids.pkl
+      src_lang: de_DGS
+    TextTokenizer:
+      pretrained_model_name_or_path: ../../pretrained_models/mBart_de_t2g
+      pruneids_file: ../../pretrained_models/mBart_de_t2g/map_ids.pkl
+      text2embed_file: ../../pretrained_models/mBart_de_t2g/text_embeddings.bin
+      tgt_lang: de_DE
+    freeze_txt_embed: false
+    label_smoothing: 0.2
+    # load_ckpt: experiments/outputs/SingleStream/phoenix-2014t_g2t/ckpts/best.ckpt
+    overwrite_cfg:
+      attention_dropout: 0.1
+      dropout: 0.3
+    pretrained_model_name_or_path: ../../pretrained_models/mBart_de_t2g
+  # VLMapper:
+  #   in_features: 512
+  #   multistream_fuse: empty
+
