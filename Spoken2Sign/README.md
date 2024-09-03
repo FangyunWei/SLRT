@@ -68,7 +68,7 @@ python -m torch.distributed.launch --nproc_per_node 8 --master_port 29999 --use_
 ```
 
 ### Text2Gloss Translator
-It is based on the gloss2text part of [TwoStream-SLT](https://github.com/FangyunWei/SLRT/tree/main/TwoStreamNetwork).
+It is based on the gloss2text part of [TwoStream-SLT](https://github.com/FangyunWei/SLRT/tree/main/TwoStreamNetwork). Required checkpoints and embeddings are available at [[for Phoenix-2014T]](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/ErcjVOXRNEpNtFV-z7bYP58BDCNxy7ek6EyB4gDs8bn-Mw?e=aWUXbS) and [[for CSL-Daily]](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/EsBVy2PjkGBCiql2h3Vit-UBMtCIVrBAVCKpBVK-7OjflA?e=i23huz).
 ```
 cd text2gloss
 config_file='configs/T2G.yaml'
