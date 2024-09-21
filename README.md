@@ -1,6 +1,8 @@
-# Sign Language Understanding
+# Sign Language Processing
 
-This repo contains the official implementations of the following papers on sign language understanding:
+This repo contains the official implementations of the following papers on sign language processing:
+
+- [EMNLP 2024] Towards Online Continuous Sign Language Recognition and Translation [[Paper]](https://arxiv.org/abs/2401.05336) [[Code]](https://github.com/FangyunWei/SLRT/tree/main/Online)
 
 - [ECCV 2024] A Simple Baseline for Spoken Language to Sign Language Translation with 3D Avatars [[Paper]](https://arxiv.org/abs/2401.04730) [[Code]](https://github.com/FangyunWei/SLRT/tree/main/Spoken2Sign)
 
@@ -15,6 +17,13 @@ This repo contains the official implementations of the following papers on sign 
 ## Citation
 Please cite our works if you find this repo is helpful.
 ```
+@inproceedings{zuo2024towards,
+  title={Towards Online Continuous Sign Language Recognition and Translation},
+  author={Zuo, Ronglai and Wei, Fangyun and Mak, Brian},
+  booktitle={EMNLP},
+  year={2024}
+}
+
 @inproceedings{zuo2024simple,
   title={A Simple Baseline for Spoken Language to Sign Language Translation with 3D Avatars},
   author={Zuo, Ronglai and Wei, Fangyun and Chen, Zenggui and Mak, Brian and Yang, Jiaolong and Tong, Xin},

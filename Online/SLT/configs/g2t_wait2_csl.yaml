@@ -1,0 +1,75 @@
+task: G2T
+data:
+  dataset_name: csl
+  dev: ../CSLR/results/online_slr_csl/prediction_slide/csl_pred.dev
+  test: ../CSLR/results/online_slr_csl/prediction_slide/csl_pred.test
+  train: ../../data/csl-daily/csl.train
+  input_data: gloss
+  level: char
+  max_sent_length: 400
+  txt_lowercase: true
+  transform_cfg:
+    img_size: 224
+    color_jitter: true
+    bottom_area: 0.7 
+    center_crop_size: 224 
+    center_crop: False
+    randomcrop_threshold: 1
+    aspect_ratio_min: 0.75
+    aspect_ratio_max: 1.3
+    temporal_augmentation:
+      tmin: 0.5
+      tmax: 1.5
+testing:
+  cfg:
+    translation:
+      length_penalty: 1
+      max_length: 100
+      num_beams: 5
+training:
+  batch_size: 8
+  keep_last_ckpts: 1
+  model_dir: results/g2t_wait2_csl
+  num_workers: 4
+  optimization:
+    betas:
+    - 0.9
+    - 0.998
+    learning_rate:
+      default: 0.0001
+      translation: 1.0e-05
+    optimizer: Adam
+    scheduler: cosineannealing
+    t_max: 80
+    weight_decay: 0.001
+  overwrite: true
+  random_seed: 0
+  shuffle: true
+  total_epoch: 4
+  validation:
+    cfg:
+      translation:
+        length_penalty: 1
+        max_length: 100
+        num_beams: 4
+    freq: 1000
+    unit: step
+model:
+  TranslationNetwork:
+    GlossEmbedding:
+      freeze: true
+      gloss2embed_file: ../../pretrained_models/mBart_zh/gloss_embeddings.bin 
+    GlossTokenizer:
+      gloss2id_file: ../../pretrained_models/mBart_zh/gloss2ids.pkl 
+      src_lang: zh_CSL
+    TextTokenizer:
+      pretrained_model_name_or_path: ../../pretrained_models/mBart_zh/ 
+      pruneids_file: ../../pretrained_models/mBart_zh/old2new_vocab.pkl 
+      tgt_lang: zh_CN
+    freeze_txt_embed: true
+    label_smoothing: 0.2
+    overwrite_cfg:
+      attention_dropout: 0.1
+      dropout: 0.3
+      wait_k: 2
+    pretrained_model_name_or_path: ../../pretrained_models/mBart_zh/
