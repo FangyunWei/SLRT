@@ -19,14 +19,14 @@ Since the segmented signs are pseudo ground-truths and their boundaries may not 
 ```
 python sign_augment.py
 ```
-We provide processed meta data for [Phoenix-2014T]() and [CSL-Daily]().
+We provide processed meta data for [Phoenix-2014T](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/EtgOb0-NAWBHssQdx4zKj_IB7IA4mGk4Wuz5nRx0D8h5Bg?e=GqJYSp) and [CSL-Daily](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/Eu-Q1K-DlW1ChO2JjNBWXKsBN3otZ88z_RKXN9hEr5g9iA?e=uS6gbq).
 
 ## Training
 ```
 config_file='configs/phoenix-2014t_ISLR.yaml'
 python -m torch.distributed.launch --nproc_per_node 8 --master_port 29999 --use_env training.py --config=${config_file} 
 ```
-We provide model checkpoints for [Phoenix-2014T]() and [CSL-Daily]().
+We provide model checkpoints for [Phoenix-2014T](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/EidJXFxpyaNPho5SKtVHEJ8BHex8Gq62koL-RrNnqtF1PA?e=IGGpxU) and [CSL-Daily](https://hkustconnect-my.sharepoint.com/:f:/g/personal/rzuo_connect_ust_hk/EhS5B3p9i3FNu5OpqFy3WyABkMMGg1VbAzMJrxjuFVOg6Q?e=c7OK0Z).
 
 ## Testing (online inference)
 ```
