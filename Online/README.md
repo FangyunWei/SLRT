@@ -1,5 +1,10 @@
 # Towards Online Continuous Sign Language Recognition and Translation
-Code for EMNLP 2024 paper: Towards Online Continuous Sign Language Recognition and Translation
+Official implementation for the EMNLP 2024 [paper](https://arxiv.org/pdf/2401.05336.pdf): Towards Online Continuous Sign Language Recognition and Translation
+
+## Introduction
+<img src="images/teaser.png" width="800">
+
+During inference, typical CTC-based models generally require the entire sign video as input to make predictions, a process known as offline recognition, which suffers from high latency and substantial memory usage. In this work, we take the first step towards online CSLR. Our approach consists of three phases: 1) developing a sign dictionary; 2) training an isolated sign language recognition model on the dictionary; and 3) employing a sliding window approach on the input sign sequence, feeding each sign clip to the optimized model for online recognition. Additionally, our online recognition model can be extended to support online translation by integrating a gloss-to-text network and can enhance the performance of any offline model. 
 
 
 ## Environment
