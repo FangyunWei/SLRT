@@ -226,7 +226,6 @@ dependencies:
     - pyarrow==3.0.0
     - pyasn1==0.4.8
     - pyasn1-modules==0.2.8
-    - pycocotools==2.0.4
     - pycosat==0.6.3
     - pycparser==2.19
     - pydot==1.4.2
@@ -250,7 +249,7 @@ dependencies:
     - sacrebleu==1.4.4
     - sacremoses==0.0.46
     - scikit-learn==0.22.2.post1
-    - scipy==1.5.4
+    - scipy==1.4.1
     - secretstorage==3.3.1
     - send2trash==1.8.0
     - sentencepiece==0.1.90
@@ -262,7 +261,7 @@ dependencies:
     - smmap==4.0.0
     - soupsieve==2.3.1
     - tabulate==0.8.9
-    - tensorboard==2.4.1
+    - tensorboard==2.2.2
     - tensorboard-data-server==0.6.1
     - tensorboard-plugin-wit==1.8.0
     - tensorflow==2.2.0
