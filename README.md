@@ -2,7 +2,7 @@
 
 This repo contains the official implementations of the following papers on sign language processing:
 
-- [EMNLP 2024] Towards Online Continuous Sign Language Recognition and Translation [[Paper]](https://arxiv.org/abs/2401.05336) [[Code]](https://github.com/FangyunWei/SLRT/tree/main/Online)
+- [EMNLP 2024] Towards Online Continuous Sign Language Recognition and Translation [[Paper]](https://arxiv.org/abs/2401.05336v2) [[Code]](https://github.com/FangyunWei/SLRT/tree/main/Online)
 
 - [ECCV 2024] A Simple Baseline for Spoken Language to Sign Language Translation with 3D Avatars [[Paper]](https://arxiv.org/abs/2401.04730) [[Code]](https://github.com/FangyunWei/SLRT/tree/main/Spoken2Sign)
 
