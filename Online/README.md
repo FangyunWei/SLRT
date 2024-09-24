@@ -1,5 +1,5 @@
 # Towards Online Continuous Sign Language Recognition and Translation
-Official implementation for the EMNLP 2024 [paper](https://arxiv.org/pdf/2401.05336.pdf): Towards Online Continuous Sign Language Recognition and Translation
+Official implementation for the EMNLP 2024 [paper](https://arxiv.org/pdf/2401.05336v2): Towards Online Continuous Sign Language Recognition and Translation
 
 ## Introduction
 <img src="images/teaser.png" width="800">
