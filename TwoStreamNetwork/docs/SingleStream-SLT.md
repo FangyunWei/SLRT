@@ -13,12 +13,12 @@ The general-domain pretraining is already done by loading the pretrained checkpo
 For Sign2Gloss pretraining, run
 ```
 dataset=phoenix-2014t #phoenix-2014t / csl-daily
-python -m torch.distributed.launch -nproc_per_node 8  --use_env training.py --config experiments/configs/SingleStream/${dataset}_s2g.yaml 
+python -m torch.distributed.launch --nproc_per_node 8  --use_env training.py --config experiments/configs/SingleStream/${dataset}_s2g.yaml 
 ```
 
 For Gloss2Text pretraining, run
 ```
-python -m torch.distributed.launch -nproc_per_node 8  --use_env training.py --config experiments/configs/SingleStream/${dataset}_g2t.yaml
+python -m torch.distributed.launch --nproc_per_node 8  --use_env training.py --config experiments/configs/SingleStream/${dataset}_g2t.yaml
 ```
 
 ## Multi-modal Joint Training
